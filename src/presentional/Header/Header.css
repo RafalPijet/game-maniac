@@ -1,0 +1,31 @@
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-main {
+    /*border: 1px solid red;*/
+    margin: 10px 0 30px;
+}
+
+.logo {
+    width: 30%;
+    margin-right: 100px;
+    padding-left: 20px;
+}
+
+.icon {
+    width: 25px;
+}
+
+.item {
+    font-family: "Montserrat";
+    padding: 5px 10px;
+    text-decoration: none;
+}
+
+.basket {
+    padding: 5px 20px 5px 10px;
+}
+
