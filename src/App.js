@@ -7,6 +7,7 @@ import { Regulations } from "./containers/RegulationsContainer/regulations.conta
 import { Contakt} from "./containers/ContaktContainer/contakt.container";
 import { Basket } from "./containers/BasketContainer/basket.container";
 import { Company } from "./containers/CompanyContainer/company.container";
+import GameBoxDetailsContainer from "./containers/GameBoxDetailsContainer/GameBoxDetailsContainer";
 
 class App extends React.Component {
     render() {
@@ -20,6 +21,7 @@ class App extends React.Component {
                         <Route exact path={"/kontakt"} component={Contakt} />
                         <Route exact path={"/basket"} component={Basket} />
                         <Route exact path={"/company"} component={Company} />
+                        <Route exact path={"/game/:id"} component={GameBoxDetailsContainer}/>
                     </Switch>
                 </MainLayout>
             </BrowserRouter>

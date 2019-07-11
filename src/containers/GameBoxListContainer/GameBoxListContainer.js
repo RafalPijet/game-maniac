@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import GameBoxList from "../../presentional/GameBoxList/GameBoxList";
+import GameBoxList from "../../presentational/GameBoxList/GameBoxList";
 
 class GameBoxListContainer extends React.Component {
     render() {

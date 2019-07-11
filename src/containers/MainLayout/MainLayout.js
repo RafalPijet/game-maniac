@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "../../presentional/Header/Header";
+import Header from "../../presentational/Header/Header";
 import "./MainLayout.css";
 
 export class MainLayout extends React.Component {

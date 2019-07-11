@@ -4,3 +4,8 @@
     width: 50%;
     justify-content: flex-end;
 }
+
+.box {
+    text-decoration: none;
+    color: #000;
+}

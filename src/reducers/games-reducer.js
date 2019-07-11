@@ -2,7 +2,9 @@ import {GET_GAMES, GET_GAME, SEARCH_GAMES} from "../actions/games-actions";
 import gamesData from "../data/games";
 
 const initialState = {
-    games: gamesData
+    games: gamesData,
+    selectedGame: {},
+    foundGames: []
 };
 
 const gamesReducer = (state = initialState, action) => {
@@ -14,7 +16,7 @@ const gamesReducer = (state = initialState, action) => {
             return {...state, selectedGame};
         case SEARCH_GAMES:
             const foundGames = state.games.filter(game => game.name.toLowerCase().includes(action.searchText.toLowerCase()));
-            return {...state, foundGames}
+            return {...state, foundGames};
         default:
             return state
     }

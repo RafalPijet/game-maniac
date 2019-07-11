@@ -1,0 +1,33 @@
+h1 {
+    text-align: center;
+}
+
+p {
+    text-align: justify;
+}
+
+.box-picture {
+    max-width: 566px;
+    max-height: 715px;
+    width: 50%;
+}
+
+.box-details-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.box-info {
+    display: inherit;
+    width: 50%;
+    flex-direction: column;
+    padding: 0 20px;
+}
+
+.box-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
