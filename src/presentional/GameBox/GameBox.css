@@ -1,0 +1,21 @@
+h2, h3 {
+    width: fit-content;
+    margin: 5px 0;
+}
+
+.box-main {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px;
+    background-color: #f5f6fa;
+    margin: 10px;
+}
+
+.box-row {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}

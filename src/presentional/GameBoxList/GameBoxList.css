@@ -1,0 +1,6 @@
+.box-list-main {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    justify-content: flex-end;
+}
