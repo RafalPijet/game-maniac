@@ -20,15 +20,17 @@ const basketReducer = (state = initialState, action) => {
                 ]
             });
         case DELETE_BASKET_GAME:
-            const basketGamesAfterDeleted = state.basketGames.filter(game => game.id !== action.id);
-            return ({...state, basketGames: basketGamesAfterDeleted});
+            const basketGamesAfterDeleted = state.basketGames.filter(basketGame => basketGame.game.id !== action.id);
+            return ({...state.basketGames, basketGames: basketGamesAfterDeleted});
         case UP_QUANTITY_OF_BASKET_GAME:
-            return state.basketGames.map(game => {
+            // return {basketGames: [...state.basketGames]};
+            return state.basketGames.map(basketGame => {
 
-                if (game.id === action.id) {
-                    return {...game, quantity: game.quantity + 1}
+                if (basketGame.game.id === action.id) {
+                    console.log(basketGame.game.name + ": " + basketGame.quantity);
+                    // return {...basketGame, quantity: basketGame.quantity + 1}
                 }
-                return game;
+                return basketGame;
             });
         case DOWN_QUANTITY_OF_BASKET_GAME:
             return state.basketGames.map(game => {

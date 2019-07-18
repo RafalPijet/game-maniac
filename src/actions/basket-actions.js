@@ -17,14 +17,16 @@ export const deleteGame = id => {
     }
 };
 
-export const upQuantity = () => {
+export const upQuantity = id => {
     return {
-        type: UP_QUANTITY_OF_BASKET_GAME
+        type: UP_QUANTITY_OF_BASKET_GAME,
+        id
     }
 };
 
-export const downQuantity = () => {
+export const downQuantity = id => {
     return {
-        type: DOWN_QUANTITY_OF_BASKET_GAME
+        type: DOWN_QUANTITY_OF_BASKET_GAME,
+        id
     }
 };

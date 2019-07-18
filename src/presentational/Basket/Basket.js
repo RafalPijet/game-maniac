@@ -7,7 +7,8 @@ const Basket = props => (
         <h2 hidden={props.isHidden}>Twój koszyk jest pusty :(</h2>
         {props.basketGames.map(basketGame => {
             return (
-                <BasketItem key={basketGame.game.id} basketGame={basketGame}/>
+                <BasketItem key={basketGame.game.id} basketGame={basketGame} upQuantity={props.upQuantity}
+                deleteGame={props.deleteGame}/>
             )
         })}
     </div>
