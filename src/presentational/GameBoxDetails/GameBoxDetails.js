@@ -12,6 +12,7 @@ const GameBoxDetails = props => (
             </div>
             <p>{props.game.description}</p>
         </div>
+        <button onClick={() => props.addGame(props.game)}>Dodaj do koszyka</button>
     </div>
 );
 

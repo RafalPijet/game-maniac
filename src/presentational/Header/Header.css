@@ -29,3 +29,8 @@ nav {
     padding: 5px 20px 5px 10px;
 }
 
+.active {
+    color: #000;
+    font-weight: bold;
+}
+

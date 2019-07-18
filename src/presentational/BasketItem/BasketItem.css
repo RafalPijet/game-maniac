@@ -1,0 +1,21 @@
+.basket-image {
+    width: 50%;
+}
+
+.basket-image-cell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.basket-item-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 80vw;
+}
+
+.basket-info {
+    width: 40vw;
+}
