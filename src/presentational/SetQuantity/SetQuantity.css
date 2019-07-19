@@ -1,0 +1,33 @@
+.basket-quantity-cell {
+    display: inherit;
+    width: 100px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.basket-button-cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+}
+
+.basket-button-cell:hover {
+    background-color: #ecf0f1;
+}
+
+.basket-item-button {
+    cursor: pointer;
+    background: none;
+    border: none;
+    margin: 0 5px;
+    outline: none;
+    font-size: 16px;
+}
+
+.basket-item-button:active {
+    color: #e74c3c;
+    font-size: 24px;
+    padding: 0;
+}

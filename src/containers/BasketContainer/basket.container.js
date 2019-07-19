@@ -1,7 +1,7 @@
 import React from "react";
-import { connect } from "react-redux";
+import {connect} from "react-redux";
 import Basket from "../../presentational/Basket/Basket";
-import { upQuantity, downQuantity, deleteGame} from "../../actions/basket-actions";
+import {upQuantity, downQuantity, deleteGame} from "../../actions/basket-actions";
 
 
 class BasketContainer extends React.Component {
@@ -11,24 +11,38 @@ class BasketContainer extends React.Component {
             hidden: false,
             total: 0
         }
-}
+    }
 
     componentDidMount() {
-        this.checkQuantityOfBasket();
+        setTimeout(() => {
+            this.checkQuantityOfBasket();
+            this.setState({total: this.countTotal()});
+        }, 5);
     }
 
     componentWillReceiveProps(nextProps, nextContext) {
-        setTimeout(() => this.checkQuantityOfBasket(), 5);
+        setTimeout(() => {
+            this.checkQuantityOfBasket();
+            this.setState({total: this.countTotal()});
+        }, 5);
     }
 
     checkQuantityOfBasket() {
         this.props.basketGames.length !== 0 ? this.setState({hidden: true}) : this.setState({hidden: false});
     }
 
+    countTotal() {
+        let total = 0;
+        this.props.basketGames.map(basketGame => {
+            total += basketGame.game.price * basketGame.quantity;
+        });
+        return total;
+    }
+
     render() {
         return <Basket basketGames={this.props.basketGames} isHidden={this.state.hidden}
-                upQuantity={this.props.upQuantity} downQuantity={this.props.downQuantity}
-                deleteGame={this.props.deleteGame} total={this.state.total}/>
+                       upQuantity={this.props.upQuantity} downQuantity={this.props.downQuantity}
+                       deleteGame={this.props.deleteGame} total={this.state.total}/>
     }
 }
 

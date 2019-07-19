@@ -22,23 +22,11 @@
     width: 80vw;
 }
 
-.basket-quantity-cell {
-    display: inherit;
-}
-
-.basket-item-button {
-    cursor: pointer;
-    background: none;
-    border: none;
-    margin: 0 5px;
-    outline: none;
-    font-size: 16px;
-}
-
 .basket-info {
     width: 40vw;
     height: 160px;
     overflow-y: auto;
+    text-align: justify;
 }
 
 .basket-delete-row {
