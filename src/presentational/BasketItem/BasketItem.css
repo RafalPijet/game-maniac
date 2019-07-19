@@ -58,3 +58,7 @@
     background-color: #c23616;
     border: none;
 }
+
+.basket-delete-button:active {
+    background-color: #e74c3c;
+}

@@ -1,0 +1,21 @@
+.add-button-main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.add-button {
+    padding: 8px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #44bd32;
+    width: fit-content;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    outline: none;
+}
+
+.add-button:active {
+    background-color: #27ae60;
+}

@@ -1,5 +1,6 @@
 import React from "react";
 import BasketItem from "../BasketItem/BasketItem";
+import Total from "../Total/Total";
 
 const Basket = props => (
     <div>
@@ -8,9 +9,10 @@ const Basket = props => (
         {props.basketGames.map(basketGame => {
             return (
                 <BasketItem key={basketGame.game.id} basketGame={basketGame} upQuantity={props.upQuantity}
-                deleteGame={props.deleteGame}/>
+                deleteGame={props.deleteGame} downQuantity={props.downQuantity}/>
             )
         })}
+        <Total hidden={!props.isHidden} total={props.total}/>
     </div>
 );
 

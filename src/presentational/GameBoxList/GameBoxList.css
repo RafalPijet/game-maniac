@@ -5,6 +5,10 @@
     justify-content: flex-end;
 }
 
+.box-list {
+    padding-bottom: 10px;
+}
+
 .box {
     text-decoration: none;
     color: #000;

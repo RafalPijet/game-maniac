@@ -3,7 +3,7 @@ import "./GameBox.css";
 
 const GameBox = props => (
     <div className="box-main">
-        <img src={props.game.image} alt={props.game.name}/>
+        <img className="box-image" src={props.game.image} alt={props.game.name}/>
         <h3>{props.game.name}</h3>
         <div className="box-row">
             <h3>{props.game.platform}</h3>

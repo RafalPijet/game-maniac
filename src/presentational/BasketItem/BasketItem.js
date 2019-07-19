@@ -14,14 +14,17 @@ const BasketItem = props => (
             </div>
             <h4>{props.basketGame.game.price} zł</h4>
             <div className="basket-quantity-cell">
-                <button className="basket-item-button">-</button>
+                <button className="basket-item-button"
+                        onClick={() => props.downQuantity(props.basketGame.game.id)}>-</button>
                 <h4>{props.basketGame.quantity}</h4>
-                <button className="basket-item-button" onClick={() => props.upQuantity(props.basketGame.game.id)}>+</button>
+                <button className="basket-item-button"
+                        onClick={() => props.upQuantity(props.basketGame.game.id)}>+</button>
                 <h4>szt</h4>
             </div>
         </div>
         <div className="basket-delete-row">
-            <button className="basket-delete-button" onClick={() => props.deleteGame(props.basketGame.game.id)}>usuń produkt</button>
+            <button className="basket-delete-button"
+                    onClick={() => props.deleteGame(props.basketGame.game.id)}>usuń produkt</button>
         </div>
     </div>
 

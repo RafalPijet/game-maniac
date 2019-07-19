@@ -2,7 +2,6 @@ import React from "react";
 import { connect } from "react-redux";
 import GameBoxDetails from "../../presentational/GameBoxDetails/GameBoxDetails";
 import { getGame } from "../../actions/games-actions";
-import { addGame} from "../../actions/basket-actions";
 
 class GameBoxDetailsContainer extends React.Component {
 
@@ -12,7 +11,7 @@ class GameBoxDetailsContainer extends React.Component {
 
     render() {
         return (
-            <GameBoxDetails game={this.props.selectedGame} addGame={this.props.addGame}/>
+            <GameBoxDetails game={this.props.selectedGame}/>
         )
     }
 }
@@ -25,7 +24,6 @@ const MapStateToProps = store => {
 
 const MapDispatchToProps = dispatch => ({
     getGame: id => dispatch(getGame(id)),
-    addGame: game => dispatch(addGame(game))
 });
 
 export default connect(MapStateToProps, MapDispatchToProps)(GameBoxDetailsContainer);

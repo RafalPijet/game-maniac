@@ -1,0 +1,10 @@
+.total-main {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.total-info {
+    display: inherit;
+    flex-direction: column;
+}

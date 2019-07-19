@@ -8,18 +8,17 @@ class BasketContainer extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            hidden: false
+            hidden: false,
+            total: 0
         }
 }
 
     componentDidMount() {
         this.checkQuantityOfBasket();
-        console.log(this.props.basketGames);
     }
 
     componentWillReceiveProps(nextProps, nextContext) {
         setTimeout(() => this.checkQuantityOfBasket(), 5);
-        console.log(nextProps.basketGames);
     }
 
     checkQuantityOfBasket() {
@@ -29,13 +28,13 @@ class BasketContainer extends React.Component {
     render() {
         return <Basket basketGames={this.props.basketGames} isHidden={this.state.hidden}
                 upQuantity={this.props.upQuantity} downQuantity={this.props.downQuantity}
-                deleteGame={this.props.deleteGame}/>
+                deleteGame={this.props.deleteGame} total={this.state.total}/>
     }
 }
 
 const MapStateToProps = store => {
     return {
-        basketGames: store.basketReducer.basketGames
+        basketGames: store.basketReducer
     }
 };
 
