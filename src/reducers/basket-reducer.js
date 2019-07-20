@@ -29,6 +29,13 @@ const basketReducer = (state = [], action) => {
         case DELETE_BASKET_GAME:
             return state.filter(basketGame => basketGame.game.id !== action.id);
         case UP_QUANTITY_OF_BASKET_GAME:
+            // return state.basketGames.map(basketGame => {
+            //    
+            //     if (basketGame.game.id === action.id) {
+            //         basketGame.quantity++;
+            //     }
+            //     return basketGame
+            // })
             return state.map(basketGame => {
 
                 if (basketGame.game.id === action.id) {

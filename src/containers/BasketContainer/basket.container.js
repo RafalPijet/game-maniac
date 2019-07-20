@@ -16,7 +16,7 @@ class BasketContainer extends React.Component {
     componentDidMount() {
         setTimeout(() => {
             this.checkQuantityOfBasket();
-            this.setState({total: this.countTotal()});
+            this.setState({total: this.countTotal()});//*todo: jak wyeliminować setTimeout*//
         }, 5);
     }
 
@@ -33,8 +33,8 @@ class BasketContainer extends React.Component {
 
     countTotal() {
         let total = 0;
-        this.props.basketGames.map(basketGame => {
-            total += basketGame.game.price * basketGame.quantity;
+        this.props.basketGames.forEach(basketGame => {
+            total += basketGame.game.price * basketGame.quantity;//*todo: reduce*//
         });
         return total;
     }
