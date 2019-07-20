@@ -17,14 +17,14 @@ class BasketContainer extends React.Component {
         setTimeout(() => {
             this.checkQuantityOfBasket();
             this.setState({total: this.countTotal()});//*todo: jak wyeliminować setTimeout*//
-        }, 5);
+        }, 1);
     }
 
     componentWillReceiveProps(nextProps, nextContext) {
         setTimeout(() => {
             this.checkQuantityOfBasket();
             this.setState({total: this.countTotal()});
-        }, 5);
+        }, 1);
     }
 
     checkQuantityOfBasket() {

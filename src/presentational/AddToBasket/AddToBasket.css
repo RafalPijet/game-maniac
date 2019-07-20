@@ -16,6 +16,18 @@
     outline: none;
 }
 
+.add-button-disabled {
+    padding: 8px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #95a5a6;
+    width: fit-content;
+    border: none;
+    border-radius: 10px;
+    cursor: progress;
+    outline: none;
+}
+
 .add-button:active {
     background-color: #27ae60;
 }
