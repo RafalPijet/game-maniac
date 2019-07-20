@@ -34,3 +34,19 @@ nav {
     font-weight: bold;
 }
 
+.header-basket {
+    position: relative;
+}
+
+.basket-counter {
+    position: absolute;
+    right: 13px;
+    bottom: 7px;
+    line-height: 12px;
+    color: #44bd32;
+    background-color: #fff;
+    width: fit-content;
+    cursor: none;
+    font-weight: bold;
+}
+
