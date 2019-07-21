@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'MyriadPro-Regular';
+    src: url("../../data/fonts/MyriadPro-Regular.ttf");
+    font-family: "Sniglet-Regular";
+    src: url("../../data/fonts/Sniglet-Regular.ttf");
+}
+
 nav {
     display: flex;
     justify-content: center;
@@ -20,7 +27,9 @@ nav {
 }
 
 .item {
-    font-family: "Montserrat";
+    font-family: "MyriadPro-Regular";
+    font-size: 18px;
+    color: #7f8c8d;
     padding: 5px 10px;
     text-decoration: none;
 }
@@ -47,6 +56,6 @@ nav {
     background-color: #fff;
     width: fit-content;
     cursor: none;
-    font-weight: bold;
+    font-family: "Sniglet-Regular";
 }
 
