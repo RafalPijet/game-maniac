@@ -5,10 +5,11 @@ import SearchComponent from "../../presentational/SearchComponent/SearchComponen
 import SortComponent from "../../presentational/SortComponent/SortComponent";
 
 class SearchAndSortContainer extends React.Component {
+
     render() {
         return (
             <div>
-                <SearchComponent/>
+                <SearchComponent searchGames={this.props.searchGames}/>
                 <SortComponent/>
             </div>
         )

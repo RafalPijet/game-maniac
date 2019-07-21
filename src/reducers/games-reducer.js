@@ -1,4 +1,4 @@
-import { GET_GAME, SEARCH_GAMES} from "../actions/games-actions";
+import { GET_GAME, SEARCH_GAMES, DELETE_FOUND_GAMES} from "../actions/games-actions";
 import gamesData from "../data/games";
 
 const initialState = {
@@ -15,6 +15,8 @@ const gamesReducer = (state = initialState, action) => {
         case SEARCH_GAMES:
             const foundGames = state.games.filter(game => game.name.toLowerCase().includes(action.searchText.toLowerCase()));
             return {...state, foundGames};
+        case DELETE_FOUND_GAMES:
+            return {...state, foundGames: []};
         default:
             return state
     }
