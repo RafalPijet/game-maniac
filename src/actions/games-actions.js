@@ -1,6 +1,14 @@
+export const ADD_GAMES = "ADD_GAMES";
 export const GET_GAME = "GET_GAME";
 export const SEARCH_GAMES = "SEARCH_GAMES";
 export const DELETE_FOUND_GAMES = "DELETE_FOUND_GAMES";
+
+export const addGames = games => {
+    return {
+        type: ADD_GAMES,
+        games
+    }
+};
 
 export const getGame = id => {
     return {

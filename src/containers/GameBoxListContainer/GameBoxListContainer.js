@@ -1,7 +1,7 @@
 import React from "react";
-import { connect } from "react-redux";
+import {connect} from "react-redux";
 import GameBoxList from "../../presentational/GameBoxList/GameBoxList";
-import { deleteFoundGames } from "../../actions/games-actions";
+import {deleteFoundGames} from "../../actions/games-actions";
 
 class GameBoxListContainer extends React.Component {
     constructor(props) {
@@ -15,12 +15,10 @@ class GameBoxListContainer extends React.Component {
         this.props.dispatch(deleteFoundGames())
     }
 
-    componentWillReceiveProps(nextProps) {
-
-        if (nextProps.foundGames) {
-            console.log(nextProps.foundGames);
-            setTimeout(() => this.setVisibleGames(), 1);
-        }
+    componentWillReceiveProps(nextProps, nextContext) {
+        // console.log("Im here");
+        // console.log(nextProps);
+        setTimeout(() => this.setVisibleGames(), 1); /*ToDo*/
     }
 
     setVisibleGames() {

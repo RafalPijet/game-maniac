@@ -11,6 +11,27 @@ import Surge2imageLarge from "../data/pictures/the-surge-2-566x715.jpg";
 const gamesData = [
     {
         id: uuid.v4(),
+        name: "Diablo 3",
+        platform: "PS4",
+        image: Diablo3image,
+        imageLarge: Diablo3imageLarge,
+        price: 119,
+        quantity: 11,
+        description: "Ponad 13 milionów graczy stawiło czoła demonicznym hordom w Diablo III. Teraz twoja kolej, by " +
+            "dołączyć do krucjaty i zmierzyć się z wrogami krain śmiertelników. " +
+            "Wydanie Ultimate Evil Edition zawiera pełną wersję gry Diablo III oraz rozszerzenie Reaper of Souls. Szykuj" +
+            " się – nadciąga coś naprawdę straszliwego. \n" +
+            "Wezwij swoich sojuszników – Graj w pojedynkę lub skrzyknij znajomych i stwórz drużynę złożoną z nawet " +
+            "czterech bohaterów — grających lokalnie na jednym ekranie albo w sieci, za pośrednictwem usługi PlayStation" +
+            " Network lub Xbox Live.\n" +
+            "Zostań legendarnym bohaterem – Wciel się w jednego z ostatnich obrońców ludzkości — krzyżowca, barbarzyńcę," +
+            " szamana, mnicha, łowczynię demonów lub czarownicę — i rozwijaj swoją postać, zdobywając legendarne skarby " +
+            "oraz opanowując nowe, niszczycielskie moce i zdolności.\n" +
+            "Przerwij demoniczne oblężenie – Siej spustoszenie w szeregach sług zła i poznaj fabułę Diablo III na " +
+            "przestrzeni wszystkich pięciu aktów; przemierzaj otwarty świat w trybie przygodowym lub poluj na pradawne demony i potwory, które czają się w mrocznych ostępach krain śmiertelników."
+    },
+    {
+        id: uuid.v4(),
         name: "Battlefield 5",
         platform: "PS4",
         image: BField5image,
@@ -39,27 +60,6 @@ const gamesData = [
             " szyku myśliwców X-wing i weź udział w ataku na ogromny gwiezdny niszczyciel Najwyższego Porządku. Lub wciel" +
             " się w rolę Iden – członkinię elitarnej jednostki specjalnej, najnowszego bohatera uniwersum Star Wars – i " +
             "poznaj porywającą, pełną emocji opowieść, której fabuła obejmuje okres 30 lat."
-    },
-    {
-        id: uuid.v4(),
-        name: "Diablo 3",
-        platform: "PS4",
-        image: Diablo3image,
-        imageLarge: Diablo3imageLarge,
-        price: 119,
-        quantity: 11,
-        description: "Ponad 13 milionów graczy stawiło czoła demonicznym hordom w Diablo III. Teraz twoja kolej, by " +
-            "dołączyć do krucjaty i zmierzyć się z wrogami krain śmiertelników. " +
-            "Wydanie Ultimate Evil Edition zawiera pełną wersję gry Diablo III oraz rozszerzenie Reaper of Souls. Szykuj" +
-            " się – nadciąga coś naprawdę straszliwego. \n" +
-            "Wezwij swoich sojuszników – Graj w pojedynkę lub skrzyknij znajomych i stwórz drużynę złożoną z nawet " +
-            "czterech bohaterów — grających lokalnie na jednym ekranie albo w sieci, za pośrednictwem usługi PlayStation" +
-            " Network lub Xbox Live.\n" +
-            "Zostań legendarnym bohaterem – Wciel się w jednego z ostatnich obrońców ludzkości — krzyżowca, barbarzyńcę," +
-            " szamana, mnicha, łowczynię demonów lub czarownicę — i rozwijaj swoją postać, zdobywając legendarne skarby " +
-            "oraz opanowując nowe, niszczycielskie moce i zdolności.\n" +
-            "Przerwij demoniczne oblężenie – Siej spustoszenie w szeregach sług zła i poznaj fabułę Diablo III na " +
-            "przestrzeni wszystkich pięciu aktów; przemierzaj otwarty świat w trybie przygodowym lub poluj na pradawne demony i potwory, które czają się w mrocznych ostępach krain śmiertelników."
     },
     {
         id: uuid.v4(),
