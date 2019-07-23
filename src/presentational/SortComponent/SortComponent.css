@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'RobotoMono-Medium';
+    src: url("../../data/fonts/RobotoMono-Medium.ttf");
+}
+
+.sort-main {
+    border: 1px solid #bdc3c7;
+    padding: 20px;
+    border-radius: 10px;
+    font-family: "RobotoMono-Medium";
+}

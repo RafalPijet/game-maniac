@@ -1,11 +1,14 @@
 .checkbox-main {
     display: flex;
-    flex-direction: row;
-    padding-top: 20px;
+    flex-direction: column;
 }
 
 .checkbox-item {
     display: flex;
     align-items: center;
-    padding-right: 5px;
+    margin: 5px 0;
+}
+
+.checkbox-logo {
+    padding: 5px 0 0 10px;
 }

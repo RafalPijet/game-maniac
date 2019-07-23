@@ -1,7 +1,7 @@
 .box-list-main {
     display: flex;
     flex-wrap: wrap;
-    width: 50%;
+    width: 85%;
     justify-content: flex-end;
 }
 

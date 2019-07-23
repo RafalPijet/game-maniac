@@ -1,9 +1,10 @@
 import React from "react";
 import BasketItem from "../BasketItem/BasketItem";
 import Total from "../Total/Total";
+import "./Basket.css";
 
 const Basket = props => (
-    <div>
+    <div className="basket-main">
         <h1>Koszyk</h1>
         <h2 hidden={props.isHidden}>Twój koszyk jest pusty :(</h2>
         {props.basketGames.map(basketGame => {

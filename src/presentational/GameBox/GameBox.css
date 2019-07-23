@@ -9,6 +9,7 @@ h2, h3 {
 }
 
 .box-main {
+    font-family: "Sniglet-Regular";
     display: flex;
     flex-wrap: wrap;
     align-items: center;

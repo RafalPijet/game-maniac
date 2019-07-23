@@ -8,11 +8,10 @@ const BasketItem = props => (
         <div className="basket-item-main">
             <div className="basket-image-cell">
                 <img className="basket-image" src={props.basketGame.game.image} alt={props.basketGame.game.name}/>
-                <h3>{props.basketGame.game.platform}</h3>
+                <img src={props.basketGame.game.platform} alt="logo"/>
             </div>
             <div className="basket-info">
                 <h2>{props.basketGame.game.name}</h2>
-                <h4>{props.basketGame.game.description}</h4>
             </div>
             <h3>{props.basketGame.game.price} zł</h3>
             <SetQuantity basketGame={props.basketGame} upQuantity={props.upQuantity} downQuantity={props.downQuantity}/>

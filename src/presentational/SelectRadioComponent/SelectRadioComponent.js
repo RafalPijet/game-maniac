@@ -1,8 +1,9 @@
 import React from "react";
 import InputRadioComponent from "../InputRadioComponent/InputRadioComponent";
+import "./SelectRadioComponent.css";
 
 const SelectRadioComponent = props => (
-    <div>
+    <div className="select-radio-main">
         <form>
             <InputRadioComponent option="noSelect" name="sortSelect" isChecked={true} label="Brak"
                                  onChangeTakeId={props.radioElementsHandling}/>

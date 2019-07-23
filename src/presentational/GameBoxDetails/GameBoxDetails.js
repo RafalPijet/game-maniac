@@ -8,7 +8,7 @@ const GameBoxDetails = props => (
         <div className="box-info">
             <h1>{props.game.name}</h1>
             <div className="box-row">
-                <h2>{props.game.platform}</h2>
+                <img src={props.game.platform} alt="logo"/>
                 <h2>{props.game.price} zł</h2>
             </div>
             <p>{props.game.description}</p>

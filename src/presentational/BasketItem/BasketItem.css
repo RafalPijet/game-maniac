@@ -6,6 +6,7 @@
 
 .basket-image {
     width: 50%;
+    margin-bottom: 15px;
 }
 
 .basket-image-cell {
@@ -23,10 +24,11 @@
 }
 
 .basket-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 40vw;
     height: 160px;
-    overflow-y: auto;
-    text-align: justify;
 }
 
 .basket-delete-row {

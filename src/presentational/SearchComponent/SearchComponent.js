@@ -1,9 +1,10 @@
 import React from "react";
+import "./SearchComponent.css";
 
 const SearchComponent = props => (
-    <div>
+    <div className="search-main">
         <h3>Szukaj:</h3>
-        <input type="text" onChange={event => props.searchGames(event.target.value)}/>
+        <input className="search-input" type="text" onChange={event => props.searchGames(event.target.value)}/>
     </div>
 );
 

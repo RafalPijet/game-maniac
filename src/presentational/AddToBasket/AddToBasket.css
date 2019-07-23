@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "Helvetica";
+    src: url("../../data/fonts/Helvetica.ttf");
+}
+
 .add-button-main {
     width: 100%;
     display: flex;
@@ -6,7 +11,8 @@
 
 .add-button {
     padding: 8px;
-    font-size: 14px;
+    font-family: "Helvetica";
+    font-size: 16px;
     color: #fff;
     background-color: #44bd32;
     width: fit-content;
@@ -18,7 +24,8 @@
 
 .add-button-disabled {
     padding: 8px;
-    font-size: 14px;
+    font-family: "Helvetica";
+    font-size: 16px;
     color: #fff;
     background-color: #95a5a6;
     width: fit-content;
