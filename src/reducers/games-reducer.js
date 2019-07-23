@@ -1,17 +1,18 @@
-import { ADD_GAMES, GET_GAME, SEARCH_GAMES, DELETE_FOUND_GAMES } from "../actions/games-actions";
-import gamesData from "../data/games";
+import { ADD_GAMES, ADD_INITIAL_GAMES, GET_GAME, SEARCH_GAMES, DELETE_FOUND_GAMES } from "../actions/games-actions";
 
 const initialState = {
-    games: gamesData,
+    games: [],
     selectedGame: {},
     foundGames: [],
-    initialGames: Array.from(gamesData)
+    initialGames: []
 };
 
 const gamesReducer = (state = initialState, action) => {
     switch (action.type) {
         case ADD_GAMES:
             return {...state, games: action.games};
+        case ADD_INITIAL_GAMES:
+            return {...state, initialGames: action.games};
         case GET_GAME:
             const selectedGame = state.games.find(game => game.id === action.id);
             return {...state, selectedGame};

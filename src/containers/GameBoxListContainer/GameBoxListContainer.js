@@ -16,8 +16,6 @@ class GameBoxListContainer extends React.Component {
     }
 
     componentWillReceiveProps(nextProps, nextContext) {
-        // console.log("Im here");
-        // console.log(nextProps);
         setTimeout(() => this.setVisibleGames(), 1); /*ToDo*/
     }
 

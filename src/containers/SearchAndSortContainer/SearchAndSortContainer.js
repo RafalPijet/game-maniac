@@ -50,7 +50,7 @@ class SearchAndSortContainer extends React.Component {
     };
 
     radioElementsHandling(id) {
-        let unsorted = this.props.games;
+        let unsorted = Array.from(this.props.initialGames);
         let sorted = [];
 
         if (id === "downPrice") {
@@ -62,17 +62,22 @@ class SearchAndSortContainer extends React.Component {
         } else if (id === "zTOa") {
             sorted = unsorted.sort(this.compareLettersFromZToA);
         } else {
-            sorted = this.props.initialGames;
+            sorted = Array.from(this.props.initialGames);
         }
         this.props.addGames([]);
         this.props.addGames(sorted);
+    }
+    
+    checkboxElementsHandling(id, isChecked) {
+        console.log(id + " -> " + isChecked);
     }
 
     render() {
         return (
             <div>
                 <SearchComponent searchGames={this.props.searchGames}/>
-                <SortComponent radioElementsHandling={this.radioElementsHandling.bind(this)}/>
+                <SortComponent checkboxElementsHandling={this.checkboxElementsHandling.bind(this)}
+                               radioElementsHandling={this.radioElementsHandling.bind(this)}/>
             </div>
         )
     }

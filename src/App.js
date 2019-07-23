@@ -1,4 +1,5 @@
 import React from "react";
+import { connect } from "react-redux";
 import { BrowserRouter, Switch, Route} from "react-router-dom";
 import { MainLayout } from "./containers/MainLayout/MainLayout";
 import { Home } from "./containers/HomeContainer/home.container";
@@ -9,8 +10,16 @@ import BasketContainer from "./containers/BasketContainer/basket.container";
 import { Company } from "./containers/CompanyContainer/company.container";
 import NoMatch from "./presentational/NoMatch/NoMatch";
 import GameBoxDetailsContainer from "./containers/GameBoxDetailsContainer/GameBoxDetailsContainer";
+import { addInitialGames, addGames } from "./actions/games-actions";
+import gamesData from "./data/games";
 
 class App extends React.Component {
+
+    componentDidMount() {
+        this.props.dispatch(addInitialGames(gamesData));
+        this.props.dispatch(addGames(gamesData));
+    }
+
     render() {
         return (
             <BrowserRouter>
@@ -31,4 +40,4 @@ class App extends React.Component {
     }
 }
 
-export default App;
+export default connect(null)(App);
