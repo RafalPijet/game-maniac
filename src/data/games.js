@@ -28,6 +28,22 @@ import Wreckfest from "../data/pictures/wreckfest-200x252.jpg";
 import WreckfestLarge from "../data/pictures/wreckfest-900x1134.jpg";
 import Zombie from "../data/pictures/zombie-army-4-200x251.jpg";
 import ZombieLarge from "../data/pictures/zombie-army-4-957x1200.jpg";
+import CallOfDuty from "../data/pictures/call-of-duty-advanced-warfare-200x230.jpg";
+import CallOfDutyLarge from "../data/pictures/call-of-duty-advanced-warfare-687x790.jpg";
+import Alien from "../data/pictures/obcy-izolacja-200x230.jpg";
+import AlienLarge from "../data/pictures/obcy-izolacja-800x920.jpg";
+import Sniper from "../data/pictures/sniper-elite-3-200x231.jpg";
+import SniperLarge from "../data/pictures/sniper-elite-3-693-800.jpg";
+import Fifa19 from "../data/pictures/fifa-19-200x231.jpg";
+import Fifa19Large from "../data/pictures/fifa-19-1041x1200.jpg";
+import EvilWithin from "../data/pictures/the-evil-within-200x285.jpg";
+import EvilWithinLarge from "../data/pictures/the-evil-within-561x800.jpg";
+import FarCry4 from "../data/pictures/far-cry-4-200x281.jpg";
+import FarCry4Large from "../data/pictures/far-cry-4-570x800.jpg";
+import NeedForSpeed from "../data/pictures/need-for-speed-200x282.jpg";
+import NeedForSpeedLarge from "../data/pictures/need-for-speed-567x800.jpg";
+import WalkingDead from "../data/pictures/walking-dead-game-200x286.jpg";
+import WalkingDeadLarge from "../data/pictures/walking-dead-game-560x800.jpg";
 
 const gamesData = [
     {
@@ -98,6 +114,50 @@ const gamesData = [
     },
     {
         id: uuid.v4(),
+        name: "Call of Duty",
+        platform: ps3,
+        image: CallOfDuty,
+        imageLarge: CallOfDutyLarge,
+        price: 79.90,
+        quantity: 8,
+        description: "Tryb multiplayer w Call of Duty®: Advanced Warfare nabiera nowych wymiarów. System poruszania się " +
+            "uległ znaczącej zmianie dzięki wprowadzeniu technologii egzoszkieletu. Nowy system nagród oznacza większe" +
+            " możliwości personalizacji i dostosowywania różnych elementów trybu multiplayer w Call of Duty®. Zmodyfikowany" +
+            " sposób poruszania się, umiejętności, uzbrojenie i wyposażenie przyszłości, a także nowe i ulubione tryby gry" +
+            " wymagają adaptacji strategicznej, tworząc dynamiczne, pełne akcji środowisko, całkowicie zmieniające charakter" +
+            " rozgrywek w trybie multiplayer. Każdy żołnierz jest wyposażony w egzoszkielet, który zapewnia wcześniej " +
+            "niespotykaną swobodę taktyczną. Dzięki wzmocnionemu skokowi gracze mogą poruszać się w pionie, docierając " +
+            "szybko do wysoko położonych miejsc i przemieszczając się po mapie w zupełnie nowy sposób. Mechanika wzmocnionego" +
+            " uniku pozwala graczom na błyskawiczne ujawnianie się i ponowne ukrywanie za osłoną. Ponadto, gracze mogą" +
+            " używać wzmocnionego przyspieszenia, wykonując uniki w powietrzu, a także ze wzmocnionego uderzenia, które" +
+            " pozwala na zaatakowanie wrogów znajdujących się poniżej. W systemie walki wręcz uwzględniono dodatkową siłę," +
+            " zapewnianą przez egzoszkielet. Dzięki tym wszystkim możliwościom walka w Call of Duty nabrała tempa i jest" +
+            " bardziej zróżnicowana."
+    },
+    {
+        id: uuid.v4(),
+        name: "The Evil Within",
+        platform: xbox360,
+        image: EvilWithin,
+        imageLarge: EvilWithinLarge,
+        price: 99.90,
+        quantity: 15,
+        description: "The Evil Within, pierwotnie ochrzczony nazwą roboczą Zwei, to miks survival horroru i gry akcji z " +
+            "perspektywy trzeciej osoby. Za tytuł odpowiada studio Tango Gameworks, kierowane przez japońskiego producenta" +
+            " – Shinjiego Mikamiego, ojca takich gier jak Dino Crisis, Devil May Cry czy Onimusha. Deweloper jest znany" +
+            " z położenia podwalin pod gatunek określany jako survival horror, który wykrystalizował się w najbardziej" +
+            " znanej produkcji Mikamiego – Resident Evil. Po wielu pobocznych projektach, jak Vanquish czy Shadows of the" +
+            " Damned, twórca postanowił powrócić do korzeni, aby ponownie wystraszyć graczy. Historia przedstawia losy " +
+            "zwykłego detektywa imieniem Sebastian. Bohater wyrusza razem z dwojgiem partnerów do ponurego miasteczka, " +
+            "by zbadać miejsce zbrodni w tamtejszym zakładzie psychiatrycznym, wybudowanym w gotyckim stylu. Okazuje się," +
+            " że w miejscu, gdzie popełniono morderstwa, nie ma żywej duszy. Po przekroczeniu bramy szpitala detektywi " +
+            "są świadkami przerażającego widoku brutalnie zmasakrowanych ciał. W toku prowadzenia śledztwa przewodnia " +
+            "postać opowieści zostaje znienacka zaatakowana i traci przytomność – po ocknięciu się towarzyszący policjant" +
+            " zostaje zabity na jej oczach. Wtedy zaczyna się podróż w głąb ciemności i prawdziwa walka o przetrwanie w" +
+            " świecie pełnym agresywnych i krwiożerczych maszkar. "
+    },
+    {
+        id: uuid.v4(),
         name: "Battlefield 5",
         platform: ps4,
         image: BField5image,
@@ -110,6 +170,43 @@ const gamesData = [
             "Operacje i kooperacyjny tryb Wojsk Łączonych, lub poznaj dramatyczne historie rozgrywające się na tle " +
             "globalnej wojny w jednoosobowych opowieściach wojennych. Walcząc w niesamowitych, zaskakujących miejscach" +
             " na całym świecie, możesz cieszyć się największą i najbardziej wciągającą grą z serii Battlefield. \n"
+    },
+    {
+        id: uuid.v4(),
+        name: "Far Cry 4",
+        platform: xbox360,
+        image: FarCry4,
+        imageLarge: FarCry4Large,
+        price: 59.90,
+        quantity: 4,
+        description: "Akcja rozegra się w Himalajach, w „zapierającym dech w piersiach, niebezpiecznym i dzikim regionie”" +
+            " Kyrat. Gracze będą walczyć z reżimem despotycznego, samozwańczego króla. Nie zdradzono szczegółów dotyczących" +
+            " rozgrywki. Twórcy zaznaczyli tylko, że odbiorcy skorzystają z „szerokiego wachlarza broni, pojazdów oraz" +
+            " zwierząt i napiszą własną historię tych terenów, podróżując po egzotycznych plenerach w otwartym świecie”. \n" +
+            "\n" +
+            "- Po sukcesie Far Cry 3 chcieliśmy wynieść serię na kolejny poziom i stworzyć grę, która zaskoczy graczy " +
+            "i przewyższy oczekiwania fanów - stwierdził Dan Hay, kierownik produkcji. - Biorąc pod uwagę niepowtarzalną" +
+            " lokację, uważamy, że Far Cry 4 będzie topową strzelanką pierwszoosobową. Więcej informacji o grze ujawnimy" +
+            " w nadchodzących miesiącach.\n"
+    },
+    {
+        id: uuid.v4(),
+        name: "Obcy Izolacja",
+        platform: ps3,
+        image: Alien,
+        imageLarge: AlienLarge,
+        price: 62.00,
+        quantity: 19,
+        description: "Alien: Isolation to pierwszoosobowy survival horror, osadzony w uniwersum filmowej serii Obcy." +
+            " Za jego powstanie odpowiada brytyjskie studio Creative Assembly, znane przede wszystkim z doskonałej serii" +
+            " strategicznej Total War. Wydawcą gry jest natomiast firma SEGA, posiadająca od wielu lat licencję na gry" +
+            " związane z kultowym cyklem o ksenomorfach. W grze wcielamy się w rolę Amandy – córki głównej bohaterki" +
+            " filmowej tetralogii, oficer Ellen Ripley. Akcja toczy się w 15 lat po wydarzeniach, znanych z pierwszej " +
+            "części filmu. Nasza protegowana wyrusza na poszukiwanie czarnej skrzynki frachtowca Nostromo, na którym " +
+            "doszło do pamiętnego, pierwszego spotkania z Obcymi. Jej celem jest poznanie całej prawdy i ustalenie, co" +
+            " tak naprawdę stało się z jej matką. W tej niebezpiecznej misji Amanda będzie mogła liczyć na wsparcie" +
+            " kilkuosobowej załogi stacji handlowej Sevastopol, zaś relacje między ludźmi, stojącymi w obliczu" +
+            " śmiertelnego zagrożenia stanowić będą istotną część fabuły. "
     },
     {
         id: uuid.v4(),
@@ -291,6 +388,117 @@ const gamesData = [
             "Epicka historia o zmaganiach o dwa legendarne miecze\n" +
             "Nowa mechanika walki, która umożliwia szybkie reakcje na poczynania przeciwnika\n" +
             "Duża lista wojowników z różnym stylem walki, w tym Geralt – najsłynniejszy z wiedźminów"
+    },
+    {
+        id: uuid.v4(),
+        name: "Sniper Elite III Afrika PL",
+        platform: ps3,
+        image: Sniper,
+        imageLarge: SniperLarge,
+        price: 129.90,
+        quantity: 42,
+        description: "Sniper Elite V3 to strzelanka osadzona na terenach Afryki w trakcie II wojny światowej.  " +
+            "Jest to trzecia część popularnej serii studia Rebellion. Identycznie jak w poprzednich częściach, gracz wciela się w postać Karla Fishburne’a, czyli strzelca wyborowego pracującego dla dowództwa amerykańskich sił zbrojnych. Rozgrywka składa się z serii misji, w większości polegających na wyeliminowaniu konkretnego celu. Głównym atutem gry jest rozbudowana mechanika snajperska, która bierze pod uwagę takie aspekty, jak prędkość i kierunek wiatru czy wpływ grawitacji na tor lotu kuli.\n" +
+            "\n" +
+            "Cechy:\n" +
+            "\n" +
+            "strzelanka osadzona w realiach drugiej wojny światowej\n" +
+            "nowością są sandboksowe mapy oparte na otwartej strukturze\n" +
+            "rozbudowana mechanika snajperska\n" +
+            "kamera rentgenowska, która z pełnymi detalami pokazuje jakie zniszczenia wyrządza pocisk w ciele trafionego\n" +
+            "PC, konsole starej i nowej generacji\n" +
+            "single/coop"
+    },
+    {
+        id: uuid.v4(),
+        name: "Need for Speed Rivals",
+        platform: xbox360,
+        image: NeedForSpeed,
+        imageLarge: NeedForSpeedLarge,
+        price: 79.55,
+        quantity: 12,
+        description: "Oto Redview County. Rywalizacja pomiędzy policją i uczestnikami wyścigów ulicznych trwa tu dzień i" +
+            " noc. Obie strony prowadzą wojnę o pozyskanie mediów społecznych, lokalnych i krajowych, próbując zdobyć " +
+            "najlepsze auta, modyfikacje i gadżety techniczne. Ryzykuj wszystko. Nie ufaj nikomu. \n" +
+            "Najważniejsze cechy:\n" +
+            "Rywalizacja o wysoką stawkę. Kierowcy są samotnymi wilkami, pracującymi na swoją chwałę w szybkich autach " +
+            "stworzonych do szaleńczych wyścigów. Policjanci działają w grupach, starając się wszelkimi dostępnymi sobie" +
+            " środkami złapać kierowców. Zmieniaj rolę, kiedy chcesz, i rywalizuj w zupełnie nowym systemie punktacji," +
+            " stawiając na szali zdobyte punkty prędkości w nadziei zgarnięcia cenniejszych nagród.\n" +
+            "All-Drive. Nowy tryb w Need for Speed Rivals zaciera granicę między rozgrywką jednoosobową i wieloosobową," +
+            " umożliwiając płynne przejście do świata, w którym Twoi znajomi biorą właśnie udział w wyścigu lub pościgu." +
+            " Bez poczekalni, bez czekania. Drogi wyścigów i pościgów się krzyżują, tworząc rzeczywistość pełną " +
+            "niepowtarzalnych sytuacji.\n" +
+            "Twoje auto to Ty! Podrasuj swój samochód, korzystając z najnowszych modyfikacji i ulepszeń technicznych." +
+            " Nadaj mu wyjątkowy styl, przebierając w wielu nowych lakierach, wzorach, tablicach rejestracyjnych," +
+            " obręczach i kalkomaniach, które odróżnią Twoje auto od pojazdów znajomych i rywali. Możesz zapisywać " +
+            "różne konfiguracje, zachowując szereg pakietów wizualnych do późniejszego użycia.\n" +
+            "Modyfikacje pojazdów. Emocje podczas jazdy są jeszcze intensywniejsze dzięki specjalnym" +
+            " urządzeniom dostępnym dla graczy po obu stronach prawa. Kierowcy mają do dyspozycji takie wyposażenie," +
+            " jak zakłócacz czy nadajnik impulsów elektromagnetycznych. Policjanci mogą dokonywać gwałtownych zatrzymań " +
+            "z użyciem fal uderzeniowych, blokad drogowych, wsparcia helikopterów z powietrza i nie tylko. Którąkolwiek " +
+            "ze stron wybierzesz, będziesz mieć do pomocy technikę ułatwiającą uzyskanie przewagi nad rywalem."
+    },
+    {
+        id: uuid.v4(),
+        name: "Fifa 19",
+        platform: ps3,
+        image: Fifa19,
+        imageLarge: Fifa19Large,
+        price: 109.11,
+        quantity: 27,
+        description: "EA SPORTS™ FIFA 19 Edycja Legacy* debiutuje 28 września na platformach PlayStation 3 i Xbox 360 z" +
+            " najnowszymi strojami, klubami i składami z najlepszych lig z całego świata. Cechy rozgrywki i tryby gry " +
+            "będą analogiczne jak w grach FIFA 18 i FIFA 17 na platformy PlayStation 3 i Xbox 360. Gra będzie dostępna w" +
+            " pełnej polskiej wersji językowej z komentarzem Dariusza Szpakowskiego i Jacka Laskowskiego. \n" +
+            "\n" +
+            "ROZGRYWKA \n" +
+            "FIFA 19 Edycja Legacy to ta sama doskonała rozgrywka, co w grach FIFA 17 i FIFA 18, bez nowych funkcji czy istotnych zmian. \n" +
+            "\n" +
+            "PREZENTACJA \n" +
+            "FIFA 19 Edycja Legacy zawiera zaktualizowane elementy graficzne, w tym nowy interfejs i nowe ekrany menu. \n" +
+            "\n" +
+            "TRYBY GRY DOSTĘPNE W EDYCJI LEGACY \n" +
+            "Gra FIFA 19 zawiera następujące tryby gry, z tymi samymi funkcjami i innowacjami, co gry FIFA 17 i FIFA 18. \n" +
+            "Szybki mecz\n" +
+            "Tryb kariery\n" +
+            "Turnieje – licencjonowane i własne\n" +
+            "Puchar reprezentacji kobiet\n" +
+            "Gry treningowe\n" +
+            "Sezony online\n" +
+            "Mecze towarzyskie online\n" +
+            "Zostań gwiazdą (zawodnik/bramkarz)\n" +
+            "\n" +
+            "FIFA ULTIMATE TEAM\n" +
+            "Tryb FIFA Ultimate Team zawiera: \n" +
+            "Zadania menedżera\n" +
+            "Sezony jednego gracza i online\n" +
+            "Turnieje jednego gracza i online\n" +
+            "Draft jednego gracza i online\n" +
+            "Pojedyncze mecze online\n" +
+            "Wyzwania budowania składu\n" +
+            "W trybie FIFA Ultimate Team w Edycji Legacy gry FIFA 19 nie będą dostępne IKONY FUT."
+    },
+    {
+        id: uuid.v4(),
+        name: "Walking Dead",
+        platform: xbox360,
+        image: WalkingDead,
+        imageLarge: WalkingDeadLarge,
+        price: 119.19,
+        quantity: 7,
+        description: "The Walking Dead to gra przygodowa autorstwa studia Telltale Games, znanego z epizodycznych" +
+            " produkcji takich jak Sam and Max, Wallace and Gromit, Tales of Monkey Island, Back to the Future oraz" +
+            " Jurassic Park. Całość bazuje na licencji wielokrotnie nagradzanej serii komiksowej stworzonej przez Roberta " +
+            "Kirkmana, wydawanej w naszym kraju pod tytułem Żywe Trupy.\n" +
+            "Głównym bohaterem The Walking Dead jest Lee Everett. Akcja gry rozpoczyna się w momencie wybuchu apokalipsy" +
+            " zombie, w czasie, gdy Rick Grimes (bohater komiksowego pierwowzoru) zapada w śpiączkę. Kiedy infekcja" +
+            " rozpoczyna swoje krwawe żniwa, Lee siedzi skuty na tylnym siedzeniu radiowozu. Został aresztowany," +
+            " bo zamordował człowieka, który sypiał z jego żoną. Autorzy postanowili przedstawić perypetie zupełnie" +
+            " nowej grupy osób, a główną inspiracją w procesie tworzenia gry jest dzieło Roberta Kirkmana, które jest" +
+            " traktowane przez deweloperów jako kanoniczna wersja historii. Gracze mogą odwiedzić miejsca i spotkać" +
+            " postacie znane z kadrów komiksu oraz dowiedzieć się o nich dodatkowych informacji. Gra została podzielona " +
+            "na pięć epizodów, a ukończenie każdego z nich zajmuje średnio około dwóch godzin."
     },
 ];
 
