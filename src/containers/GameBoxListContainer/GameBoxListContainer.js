@@ -1,7 +1,6 @@
 import React from "react";
-import {connect} from "react-redux";
+import { connect } from "react-redux";
 import GameBoxList from "../../presentational/GameBoxList/GameBoxList";
-import {deleteFoundGames} from "../../actions/games-actions";
 
 class GameBoxListContainer extends React.Component {
     constructor(props) {
@@ -9,10 +8,6 @@ class GameBoxListContainer extends React.Component {
         this.state = {
             visibleGames: this.props.games
         }
-    }
-
-    componentDidMount() {
-        this.props.dispatch(deleteFoundGames())
     }
 
     componentWillReceiveProps(nextProps, nextContext) {

@@ -1,10 +1,22 @@
 import React from "react";
-import {connect} from "react-redux";
-import {searchGames, addGames} from "../../actions/games-actions";
+import { connect } from "react-redux";
+import { searchGames, addGames, searchPlatform, deletePlatform } from "../../actions/games-actions";
 import SearchComponent from "../../presentational/SearchComponent/SearchComponent";
 import SortComponent from "../../presentational/SortComponent/SortComponent";
 
 class SearchAndSortContainer extends React.Component {
+    componentDidMount() {
+        console.log(this.props);
+        setTimeout(() => {
+            this.props.searchPlatform("logo_pc");
+            this.props.searchPlatform("logo_ps3");
+            this.props.searchPlatform("logo_ps4");
+            this.props.searchPlatform("logo_xbox_360");
+            this.props.searchPlatform("logo_xbox_one");
+        }, 100);
+        setTimeout(() => console.log(this.props), 1000);
+    }
+
     compareNumbersInDown = (a, b) => {
         let comparison = 0;
 
@@ -67,9 +79,17 @@ class SearchAndSortContainer extends React.Component {
         this.props.addGames([]);
         this.props.addGames(sorted);
     }
-    
+
     checkboxElementsHandling(id, isChecked) {
         console.log(id + " -> " + isChecked);
+
+        if (isChecked) {
+            this.props.searchPlatform(id);
+        } else {
+            this.props.deletePlatform(id);
+        }
+
+        setTimeout(() => console.log(this.props), 100);
     }
 
     render() {
@@ -93,7 +113,9 @@ const MapStateToProps = store => {
 
 const MapDispatchToProps = dispatch => ({
     searchGames: searchText => dispatch(searchGames(searchText)),
-    addGames: games => dispatch(addGames(games))
+    addGames: games => dispatch(addGames(games)),
+    searchPlatform: platform => dispatch(searchPlatform(platform)),
+    deletePlatform: platform => dispatch(deletePlatform(platform))
 });
 
 export default connect(MapStateToProps, MapDispatchToProps)(SearchAndSortContainer)
