@@ -8,4 +8,12 @@
 
 .search-input {
     font-size: 14px;
+    outline: none;
+}
+
+.search-input-not-found {
+    font-size: 14px;
+    outline: none;
+    background-color: #e74c3c;
+    color: #fff;
 }

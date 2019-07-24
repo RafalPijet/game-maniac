@@ -21,16 +21,16 @@ const gamesReducer = (state = initialState, action) => {
             const foundGames = state.games.filter(game => game.name.toLowerCase().includes(action.searchText.toLowerCase()));
             return { ...state, foundGames };
         case SEARCH_GAMES_BY_PLATFORMS:
-            const foundGamesByPlatform = state.games.filter(game => game.platform.includes(action.platform));
-            return { ...state, foundGames: [...state.foundGames, ...foundGamesByPlatform] };
+            const foundGamesByPlatform = state.initialGames.filter(game => game.platform.includes(action.platform));
+            return { ...state, games: [...foundGamesByPlatform, ...state.games] };
         case DELETE_GAMES_BY_PLATFORMS:
             const foundGamesAfterDelete = [];
-            state.foundGames.forEach(foundGame => {
+            state.games.forEach(foundGame => {
                 if (!foundGame.platform.includes(action.platform)) {
                     foundGamesAfterDelete.push(foundGame);
                 }
             });
-            return { ...state, foundGames: foundGamesAfterDelete };
+            return { ...state, games: foundGamesAfterDelete };
         case DELETE_FOUND_GAMES:
             return { ...state, foundGames: [] };
         default:

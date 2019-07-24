@@ -1,20 +1,15 @@
 import React from "react";
 import { connect } from "react-redux";
-import { searchGames, addGames, searchPlatform, deletePlatform } from "../../actions/games-actions";
+import { searchGames, addGames, deleteFoundGames, searchPlatform, deletePlatform } from "../../actions/games-actions";
 import SearchComponent from "../../presentational/SearchComponent/SearchComponent";
 import SortComponent from "../../presentational/SortComponent/SortComponent";
 
 class SearchAndSortContainer extends React.Component {
-    componentDidMount() {
-        console.log(this.props);
-        setTimeout(() => {
-            this.props.searchPlatform("logo_pc");
-            this.props.searchPlatform("logo_ps3");
-            this.props.searchPlatform("logo_ps4");
-            this.props.searchPlatform("logo_xbox_360");
-            this.props.searchPlatform("logo_xbox_one");
-        }, 100);
-        setTimeout(() => console.log(this.props), 1000);
+    constructor(props) {
+        super(props);
+        this.state = {
+            sortType: "noSelect"
+        }
     }
 
     compareNumbersInDown = (a, b) => {
@@ -62,7 +57,9 @@ class SearchAndSortContainer extends React.Component {
     };
 
     radioElementsHandling(id) {
-        let unsorted = Array.from(this.props.initialGames);
+        this.props.deleteFoundGames();
+        this.setState({sortType: id});
+        let unsorted = Array.from(this.props.games);
         let sorted = [];
 
         if (id === "downPrice") {
@@ -74,22 +71,19 @@ class SearchAndSortContainer extends React.Component {
         } else if (id === "zTOa") {
             sorted = unsorted.sort(this.compareLettersFromZToA);
         } else {
-            sorted = Array.from(this.props.initialGames);
+            sorted = Array.from(this.props.games);
         }
         this.props.addGames([]);
         this.props.addGames(sorted);
     }
 
     checkboxElementsHandling(id, isChecked) {
-        console.log(id + " -> " + isChecked);
+        const useCheckboxes = () => new Promise(resolve => resolve(
+            isChecked ? this.props.searchPlatform(id) : this.props.deletePlatform(id)
+        ));
 
-        if (isChecked) {
-            this.props.searchPlatform(id);
-        } else {
-            this.props.deletePlatform(id);
-        }
-
-        setTimeout(() => console.log(this.props), 100);
+        useCheckboxes()
+            .then(() => this.radioElementsHandling(this.state.sortType));
     }
 
     render() {
@@ -114,6 +108,7 @@ const MapStateToProps = store => {
 const MapDispatchToProps = dispatch => ({
     searchGames: searchText => dispatch(searchGames(searchText)),
     addGames: games => dispatch(addGames(games)),
+    deleteFoundGames: () => dispatch(deleteFoundGames()),
     searchPlatform: platform => dispatch(searchPlatform(platform)),
     deletePlatform: platform => dispatch(deletePlatform(platform))
 });
