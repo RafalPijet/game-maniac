@@ -3,6 +3,7 @@
     width: 100px;
     justify-content: space-around;
     align-items: center;
+    padding-top: 10px;
 }
 
 .basket-button-cell {
@@ -11,6 +12,7 @@
     align-items: center;
     width: 20px;
     height: 20px;
+    margin-bottom: 10px;
 }
 
 .basket-button-cell:hover {

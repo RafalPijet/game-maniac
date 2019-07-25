@@ -1,12 +1,17 @@
 .select-radio-main {
     border-bottom: 1px solid #bdc3c7;
+    padding-bottom: 37px;
 }
 
 .input-radio-item {
     padding: 10px 0;
 }
+.input-radio {
+    cursor: pointer;
+}
 
 .input-radio-label {
     padding-left: 10px;
     font-size: 14px;
+    cursor: pointer;
 }

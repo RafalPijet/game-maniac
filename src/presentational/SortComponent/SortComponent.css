@@ -3,6 +3,10 @@
     src: url("../../data/fonts/RobotoMono-Medium.ttf");
 }
 
+.sort-desc {
+    font-size: 18px;
+}
+
 .sort-main {
     border: 1px solid #bdc3c7;
     padding: 20px;

@@ -37,4 +37,5 @@
 
 .add-button:active {
     background-color: #27ae60;
+    outline: none;
 }

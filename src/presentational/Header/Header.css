@@ -45,6 +45,7 @@ nav {
 
 .header-basket {
     position: relative;
+    display: inline-flex;
 }
 
 .basket-counter {

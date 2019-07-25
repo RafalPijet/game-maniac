@@ -1,8 +1,17 @@
+.box-list-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .box-list-main {
     display: flex;
     flex-wrap: wrap;
-    width: 85%;
+    max-width: 1000px;
+    width: 100%;
+    height: 850px;
     justify-content: flex-end;
+    overflow-y: auto;
 }
 
 .box-list {
@@ -10,6 +19,11 @@
 }
 
 .box {
+    text-decoration: none;
+    color: #000;
+}
+
+.box:hover {
     text-decoration: none;
     color: #000;
 }

@@ -1,6 +1,7 @@
 .checkbox-main {
     display: flex;
     flex-direction: column;
+    padding-top: 37px;
 }
 
 .checkbox-item {
@@ -9,6 +10,11 @@
     margin: 5px 0;
 }
 
+.checkbox-input {
+    cursor: pointer;
+}
+
 .checkbox-logo {
     padding: 5px 0 0 10px;
+    cursor: pointer;
 }

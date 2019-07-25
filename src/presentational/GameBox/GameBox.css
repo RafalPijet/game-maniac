@@ -8,6 +8,10 @@ h2, h3 {
     height: 245px;
 }
 
+.box-name {
+    font-size: 18px;
+}
+
 .box-main {
     font-family: "Sniglet-Regular";
     display: flex;

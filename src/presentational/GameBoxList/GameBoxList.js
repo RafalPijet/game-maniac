@@ -1,22 +1,87 @@
 import React from "react";
+import {Link} from "react-router-dom";
+import {Pagination, PaginationItem, PaginationLink} from "reactstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 import GameBox from "../GameBox/GameBox";
 import AddToBasket from "../../presentational/AddToBasket/AddToBasket";
-import { Link } from "react-router-dom";
 import "./GameBoxList.css";
 
-const GameBoxList = props => (
-    <div className="box-list-main">
-        {props.games.map(game => {
-            return (
-                <div className="box-list" key={game.id}>
-                    <Link className="box" to={'/game/' + game.id}>
-                        <GameBox game={game}/>
-                    </Link>
-                    <AddToBasket game={game}/>
+class GameBoxList extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            games: [],
+            pagesCount: 0,
+            currentPage: 0
+        };
+        this.pageSize = 8;
+    }
+
+    componentDidMount() {
+        setTimeout(() => this.setState({ /*todo*/
+            games: this.props.games,
+            pagesCount: Math.ceil(this.state.games.length / this.pageSize)
+        }), 10)
+    }
+
+    componentWillReceiveProps(nextProps) {
+        setTimeout(() => this.setState({ /*todo*/
+            games: this.props.games,
+            pagesCount: Math.ceil(this.state.games.length / this.pageSize)
+        }), 10);
+    }
+
+    handleClick(event, index) {
+        event.preventDefault();
+        this.setState({currentPage: index})
+    }
+
+    render() {
+        const {currentPage} = this.state;
+        return (
+            <div className="box-list-container">
+                <div className="box-list-main">
+                    {this.state.games
+                        .slice(currentPage * this.pageSize, (currentPage + 1) * this.pageSize)
+                        .map(game => (
+                                <div className="box-list" key={game.id}>
+                                    <Link className="box" to={'/game/' + game.id}>
+                                        <GameBox game={game}/>
+                                    </Link>
+                                    <AddToBasket game={game}/>
+                                </div>
+                            )
+                        )
+                    }
                 </div>
-            )
-        })}
-    </div>
-);
+                <div className="pagination-wrapper">
+                    <Pagination aria-label="Page navigation">
+                        <PaginationItem disabled={currentPage <= 0}>
+                            <PaginationLink
+                                onClick={event => this.handleClick(event, currentPage - 1)}
+                                previous
+                                href="#"
+                            />
+                        </PaginationItem>
+                        {[...Array(this.state.pagesCount)].map((page, i) => (
+                            <PaginationItem active={i === currentPage} key={i}>
+                                <PaginationLink onClick={event => this.handleClick(event, i)} href="#">
+                                    {i + 1}
+                                </PaginationLink>
+                            </PaginationItem>
+                        ))}
+                        <PaginationItem disabled={currentPage >= this.state.pagesCount - 1}>
+                            <PaginationLink
+                                onClick={event => this.handleClick(event, currentPage + 1)}
+                                next
+                                href="#"
+                            />
+                        </PaginationItem>
+                    </Pagination>
+                </div>
+            </div>
+        )
+    }
+}
 
 export default GameBoxList;

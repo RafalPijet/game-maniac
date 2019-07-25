@@ -14,17 +14,20 @@
 
 .price-item {
     margin: 0;
+    font-size: 32px;
 }
 
 .old-price-item {
     position: absolute;
     right: 0;
-    bottom: -36px;
+    bottom: -23px;
     text-decoration: line-through;
     color: #7f8c8d;
+    font-size: 16px;
 }
 
 .fraction-item {
     margin: 0;
     line-height: 14px;
+    font-size: 13px;
 }

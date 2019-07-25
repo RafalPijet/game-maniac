@@ -500,7 +500,7 @@ const gamesData = [
     },
     {
         id: uuid.v4(),
-        name: "Walking Dead",
+        name: "The Walking Dead",
         platform: xbox360,
         image: WalkingDead,
         imageLarge: WalkingDeadLarge,

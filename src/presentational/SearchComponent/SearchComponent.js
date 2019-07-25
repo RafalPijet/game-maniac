@@ -23,7 +23,7 @@ class SearchComponent extends React.Component {
     render() {
         return (
             <div className="search-main">
-                <h3>Szukaj:</h3>
+                <h3 className="search-desc">Szukaj:</h3>
                 <input className={this.state.inputStyle} type="text"
                        onChange={event => this.inputHandling(event.target.value)}
                        onBlur={event => {
