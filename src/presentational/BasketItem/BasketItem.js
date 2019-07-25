@@ -2,6 +2,7 @@ import React from "react";
 import "./BasketItem.css";
 import "../SetQuantity/SetQuantity";
 import SetQuantity from "../SetQuantity/SetQuantity";
+import ShowPriceComponent from "../../presentational/ShowPriceComponent/ShowPriceComponent";
 
 const BasketItem = props => (
     <div className="basket-container">
@@ -13,7 +14,7 @@ const BasketItem = props => (
             <div className="basket-info">
                 <h2>{props.basketGame.game.name}</h2>
             </div>
-            <h3>{props.basketGame.game.price} zł</h3>
+            <ShowPriceComponent price={props.basketGame.game.price} oldPrice={props.basketGame.game.oldPrice}/>
             <SetQuantity basketGame={props.basketGame} upQuantity={props.upQuantity} downQuantity={props.downQuantity}/>
         </div>
         <div className="basket-delete-row">
