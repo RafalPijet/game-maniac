@@ -5,7 +5,7 @@ const Total = props => (
     <div hidden={props.hidden}>
         <div className="total-main">
             <div className="total-info">
-                <h3>TOTAL: {props.total.toFixed(2)} zł</h3>
+                <h3>TOTAL: {props.total} zł</h3>
                 <button>Zapłać</button>
             </div>
         </div>

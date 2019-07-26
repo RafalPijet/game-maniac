@@ -32,11 +32,17 @@ class BasketContainer extends React.Component {
     }
 
     countTotal() {
-        let total = 0;
+        let totalInBasket = [];
+        const sum = (total, num) => {
+            return total + num
+        };
         this.props.basketGames.forEach(basketGame => {
-            total += basketGame.game.price * basketGame.quantity;//*todo: reduce*//
+            totalInBasket = [...totalInBasket, (basketGame.game.price * basketGame.quantity)]
         });
-        return total;
+
+        if (this.props.basketGames.length !== 0) {
+            return Math.round((totalInBasket.reduce(sum) * 100)) / 100;
+        }
     }
 
     render() {
