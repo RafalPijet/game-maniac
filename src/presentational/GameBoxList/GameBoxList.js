@@ -9,39 +9,40 @@ import "./GameBoxList.css";
 class GameBoxList extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            games: [],
-            pagesCount: 0,
-            currentPage: 0
-        };
         this.pageSize = 8;
     }
 
-    componentDidMount() {
-        setTimeout(() => this.setState({ /*todo*/
-            games: this.props.games,
-            pagesCount: Math.ceil(this.state.games.length / this.pageSize)
-        }), 10)
+    shouldComponentUpdate(nextProps, nextState, nextContext) {
+        return nextProps.games.length !== 0
     }
 
-    componentWillReceiveProps(nextProps) {
-        setTimeout(() => this.setState({ /*todo*/
-            games: this.props.games,
-            pagesCount: Math.ceil(this.state.games.length / this.pageSize)
-        }), 10);
+    componentWillUpdate(nextProps) {
+        this.props.setPagesCount(Math.ceil(this.props.games.length / this.pageSize));
+    }
+
+    componentDidMount() {
+        let gameIsLoading = false;
+        while (gameIsLoading) {
+            this.props.games.length !== 0 ? gameIsLoading = true : gameIsLoading = false;
+            console.log(gameIsLoading);
+        }
+
+        if (gameIsLoading) {
+            this.props.setPagesCount(Math.ceil(this.props.games.length / this.pageSize));
+        }
     }
 
     handleClick(event, index) {
         event.preventDefault();
-        this.setState({currentPage: index})
+        this.props.setCurrentPage(index);
     }
 
     render() {
-        const {currentPage} = this.state;
+        const currentPage = this.props.currentPage;
         return (
             <div className="box-list-container">
                 <div className="box-list-main">
-                    {this.state.games
+                    {this.props.games
                         .slice(currentPage * this.pageSize, (currentPage + 1) * this.pageSize)
                         .map(game => (
                                 <div className="box-list" key={game.id}>
@@ -63,14 +64,14 @@ class GameBoxList extends React.Component {
                                 href="#"
                             />
                         </PaginationItem>
-                        {[...Array(this.state.pagesCount)].map((page, i) => (
+                        {[...Array(this.props.pagesCount)].map((page, i) => (
                             <PaginationItem active={i === currentPage} key={i}>
                                 <PaginationLink onClick={event => this.handleClick(event, i)} href="#">
                                     {i + 1}
                                 </PaginationLink>
                             </PaginationItem>
                         ))}
-                        <PaginationItem disabled={currentPage >= this.state.pagesCount - 1}>
+                        <PaginationItem disabled={currentPage >= this.props.pagesCount - 1}>
                             <PaginationLink
                                 onClick={event => this.handleClick(event, currentPage + 1)}
                                 next
