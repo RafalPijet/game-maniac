@@ -11,6 +11,7 @@ import { Company } from "./containers/CompanyContainer/company.container";
 import NoMatch from "./presentational/NoMatch/NoMatch";
 import GameBoxDetailsContainer from "./containers/GameBoxDetailsContainer/GameBoxDetailsContainer";
 import { addInitialGames, addGames } from "./actions/games-actions";
+import { setPagesCount } from "./actions/values-actions";
 import gamesData from "./data/games";
 
 class App extends React.Component {
@@ -18,6 +19,10 @@ class App extends React.Component {
     componentDidMount() {
         this.props.dispatch(addInitialGames(gamesData));
         this.props.dispatch(addGames(gamesData));
+    }
+
+    componentWillReceiveProps(nextProps, nextContext) {
+        this.props.dispatch(setPagesCount(Math.ceil(nextProps.games.length / 8)))
     }
 
     render() {
@@ -40,4 +45,10 @@ class App extends React.Component {
     }
 }
 
-export default connect(null)(App);
+const MapStateToProps = store => {
+    return {
+        games: store.gamesReducer.games
+    }
+};
+
+export default connect(MapStateToProps)(App);

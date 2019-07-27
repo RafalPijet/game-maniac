@@ -12,24 +12,9 @@ class GameBoxList extends React.Component {
         this.pageSize = 8;
     }
 
-    shouldComponentUpdate(nextProps, nextState, nextContext) {
-        return nextProps.games.length !== 0
-    }
-
-    componentWillUpdate(nextProps) {
+    componentWillReceiveProps(nextProps) {
+        console.log("wow");
         this.props.setPagesCount(Math.ceil(this.props.games.length / this.pageSize));
-    }
-
-    componentDidMount() {
-        let gameIsLoading = false;
-        while (gameIsLoading) {
-            this.props.games.length !== 0 ? gameIsLoading = true : gameIsLoading = false;
-            console.log(gameIsLoading);
-        }
-
-        if (gameIsLoading) {
-            this.props.setPagesCount(Math.ceil(this.props.games.length / this.pageSize));
-        }
     }
 
     handleClick(event, index) {

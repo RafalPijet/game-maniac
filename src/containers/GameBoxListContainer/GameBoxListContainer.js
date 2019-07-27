@@ -29,8 +29,7 @@ class GameBoxListContainer extends React.Component {
     render() {
         return <GameBoxList games={this.state.visibleGames} pagesCount={this.props.pagesCount}
                             currentPage={this.props.currentPage} setPagesCount={this.props.setPagesCount}
-                            setCurrentPage={this.props.setCurrentPage} getPagesCount={this.props.getPagesCount}
-                            getCurrentPage={this.props.getCurrentPage}/>
+                            setCurrentPage={this.props.setCurrentPage}/>
     }
 }
 
