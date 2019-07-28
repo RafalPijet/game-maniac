@@ -14,11 +14,12 @@ class SetQuantity extends React.Component {
         this.checkInterval();
     }
 
+    setQuantityInStore = (id, isUp) => new Promise(resolve => resolve(
+        isUp ? this.props.upQuantity(id) : this.props.downQuantity(id)
+    ));
+
     quantityHandling(id, isUp) {
-        const setQuantityInStore = () => new Promise(resolve => resolve(
-            isUp ? this.props.upQuantity(id) : this.props.downQuantity(id)
-        ));
-        setQuantityInStore()
+        this.setQuantityInStore(id, isUp)
             .then(() => this.checkInterval())
     }
 

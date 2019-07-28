@@ -1,6 +1,7 @@
 import React from "react";
 import {connect} from "react-redux";
 import "./SearchComponent.css";
+import { setSearchState } from "../../actions/values-actions";
 
 class SearchComponent extends React.Component {
     constructor(props) {
@@ -10,13 +11,20 @@ class SearchComponent extends React.Component {
             inputStyle: "search-input"
         }
     }
+    componentWillReceiveProps(nextProps) {
+        if (!nextProps.searchState) {
+            this.setState({searchText: ""})
+        }
+    }
+
+    setValue = value => new Promise(resolve => resolve(
+        this.props.searchGames(value),
+        this.setState({searchText: value})
+    ));
 
     inputHandling(value) {
-        const setValue = () => new Promise(resolve => resolve(
-            this.props.searchGames(value),
-            this.setState({searchText: value})
-        ));
-        setValue()
+        this.props.setSearchState(true);
+        this.setValue(value)
             .then(() => this.state.searchText.length > 0 && this.props.foundGames.length === 0 ?
                 this.setState({inputStyle: "search-input-not-found"}) :
                 this.setState({inputStyle: "search-input"}));
@@ -26,12 +34,13 @@ class SearchComponent extends React.Component {
         return (
             <div className="search-main">
                 <h3 className="search-desc">Szukaj:</h3>
-                <input className={this.state.inputStyle} type="text"
+                <input className={this.state.inputStyle} type="text" value={this.state.searchText}
                        onChange={event => this.inputHandling(event.target.value)}
-                       onBlur={event => {
+                       onBlur={() => {
                            this.setState({inputStyle: "search-input"});
+
                            if (this.props.foundGames.length === 0) {
-                               event.target.value = ""
+                               this.setState({searchText: ""})
                            }
                        }}/>
             </div>
@@ -41,8 +50,13 @@ class SearchComponent extends React.Component {
 
 const MapStateToProps = store => {
     return {
-        foundGames: store.gamesReducer.foundGames
+        foundGames: store.gamesReducer.foundGames,
+        searchState: store.valuesReducer.searchState
     }
 };
-export default connect(MapStateToProps)(SearchComponent)
+
+const MapDispatchToProps = dispatch => ({
+    setSearchState: isTrue => dispatch(setSearchState(isTrue))
+});
+export default connect(MapStateToProps, MapDispatchToProps)(SearchComponent)
 

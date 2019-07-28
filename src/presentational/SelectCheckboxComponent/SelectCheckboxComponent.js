@@ -9,13 +9,16 @@ import xboxOne from "../../data/pictures/logo_xbox_one.png";
 
 const SelectCheckboxComponent = props => (
     <div className="checkbox-main">
-        <InputCheckboxComponent name="logo_pc" logo={pc} onChangeTakeId={props.checkboxElementsHandling} isChecked={true}/>
-        <InputCheckboxComponent name="logo_ps3" logo={ps3} onChangeTakeId={props.checkboxElementsHandling} isChecked={true}/>
-        <InputCheckboxComponent name="logo_ps4" logo={ps4} onChangeTakeId={props.checkboxElementsHandling} isChecked={true}/>
+        <InputCheckboxComponent name="logo_pc" logo={pc} onChangeTakeId={props.checkboxElementsHandling} isChecked={true}
+                                setSearchState={props.setSearchState}/>
+        <InputCheckboxComponent name="logo_ps3" logo={ps3} onChangeTakeId={props.checkboxElementsHandling} isChecked={true}
+                                setSearchState={props.setSearchState}/>
+        <InputCheckboxComponent name="logo_ps4" logo={ps4} onChangeTakeId={props.checkboxElementsHandling} isChecked={true}
+                                setSearchState={props.setSearchState}/>
         <InputCheckboxComponent name="logo_xbox_360" logo={xbox360} onChangeTakeId={props.checkboxElementsHandling}
-                                isChecked={true}/>
+                                isChecked={true} setSearchState={props.setSearchState}/>
         <InputCheckboxComponent name="logo_xbox_one" logo={xboxOne} onChangeTakeId={props.checkboxElementsHandling}
-                                isChecked={true}/>
+                                isChecked={true} setSearchState={props.setSearchState}/>
     </div>
 );
 

@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { searchGames, addGames, deleteFoundGames, searchPlatform, deletePlatform } from "../../actions/games-actions";
+import { setSearchState } from "../../actions/values-actions";
 import SearchComponent from "../../presentational/SearchComponent/SearchComponent";
 import SortComponent from "../../presentational/SortComponent/SortComponent";
 
@@ -91,7 +92,8 @@ class SearchAndSortContainer extends React.Component {
             <div>
                 <SearchComponent searchGames={this.props.searchGames}/>
                 <SortComponent checkboxElementsHandling={this.checkboxElementsHandling.bind(this)}
-                               radioElementsHandling={this.radioElementsHandling.bind(this)}/>
+                               radioElementsHandling={this.radioElementsHandling.bind(this)}
+                               setSearchState={this.props.setSearchState}/>
             </div>
         )
     }
@@ -110,7 +112,8 @@ const MapDispatchToProps = dispatch => ({
     addGames: games => dispatch(addGames(games)),
     deleteFoundGames: () => dispatch(deleteFoundGames()),
     searchPlatform: platform => dispatch(searchPlatform(platform)),
-    deletePlatform: platform => dispatch(deletePlatform(platform))
+    deletePlatform: platform => dispatch(deletePlatform(platform)),
+    setSearchState: isTrue => dispatch(setSearchState(isTrue))
 });
 
 export default connect(MapStateToProps, MapDispatchToProps)(SearchAndSortContainer)
