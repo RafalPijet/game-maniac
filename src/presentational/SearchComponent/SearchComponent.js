@@ -10,6 +10,7 @@ class SearchComponent extends React.Component {
             inputStyle: "search-input"
         }
     }
+
     inputHandling(value) {
         const setValue = () => new Promise(resolve => resolve(
             this.props.searchGames(value),
@@ -17,9 +18,10 @@ class SearchComponent extends React.Component {
         ));
         setValue()
             .then(() => this.state.searchText.length > 0 && this.props.foundGames.length === 0 ?
-                    this.setState({inputStyle: "search-input-not-found"}) :
-                    this.setState({inputStyle: "search-input"}));
+                this.setState({inputStyle: "search-input-not-found"}) :
+                this.setState({inputStyle: "search-input"}));
     }
+
     render() {
         return (
             <div className="search-main">
@@ -27,13 +29,16 @@ class SearchComponent extends React.Component {
                 <input className={this.state.inputStyle} type="text"
                        onChange={event => this.inputHandling(event.target.value)}
                        onBlur={event => {
-                           event.target.value = "";
                            this.setState({inputStyle: "search-input"});
+                           if (this.props.foundGames.length === 0) {
+                               event.target.value = ""
+                           }
                        }}/>
             </div>
         )
     }
 }
+
 const MapStateToProps = store => {
     return {
         foundGames: store.gamesReducer.foundGames

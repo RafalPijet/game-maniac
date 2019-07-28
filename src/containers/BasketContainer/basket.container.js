@@ -1,42 +1,37 @@
 import React from "react";
 import {connect} from "react-redux";
 import Basket from "../../presentational/Basket/Basket";
-import {upQuantity, downQuantity, deleteGame} from "../../actions/basket-actions";
+import { upQuantity, downQuantity, deleteGame } from "../../actions/basket-actions";
+import { setTotal } from "../../actions/values-actions";
 
 
 class BasketContainer extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            hidden: false,
-            total: 0
+            hidden: false
         }
     }
 
     componentDidMount() {
-        setTimeout(() => {
-            this.checkQuantityOfBasket();
-            this.setState({total: this.countTotal()});//*todo: jak wyeliminować setTimeout*//
-        }, 1);
+        this.checkQuantityOfBasket(this.props.basketGames);
     }
 
-    componentWillReceiveProps(nextProps, nextContext) {
-        setTimeout(() => {
-            this.checkQuantityOfBasket();
-            this.setState({total: this.countTotal()});
-        }, 1);
+    componentWillReceiveProps(nextProps) {
+        this.checkQuantityOfBasket(nextProps.basketGames);
     }
 
-    checkQuantityOfBasket() {
-        this.props.basketGames.length !== 0 ? this.setState({hidden: true}) : this.setState({hidden: false});
+    checkQuantityOfBasket(basketGames) {
+        this.props.setTotal(this.countTotal(basketGames));
+        basketGames.length !== 0 ? this.setState({hidden: true}) : this.setState({hidden: false});
     }
 
-    countTotal() {
+    countTotal(basketGames) {
         let totalInBasket = [];
         const sum = (total, num) => {
             return total + num
         };
-        this.props.basketGames.forEach(basketGame => {
+        basketGames.forEach(basketGame => {
             totalInBasket = [...totalInBasket, (basketGame.game.price * basketGame.quantity)]
         });
 
@@ -48,20 +43,22 @@ class BasketContainer extends React.Component {
     render() {
         return <Basket basketGames={this.props.basketGames} isHidden={this.state.hidden}
                        upQuantity={this.props.upQuantity} downQuantity={this.props.downQuantity}
-                       deleteGame={this.props.deleteGame} total={this.state.total}/>
+                       deleteGame={this.props.deleteGame} total={this.props.total}/>
     }
 }
 
 const MapStateToProps = store => {
     return {
-        basketGames: store.basketReducer
+        basketGames: store.basketReducer,
+        total: store.valuesReducer.total
     }
 };
 
 const MapDispatchToProps = dispatch => ({
     upQuantity: id => dispatch(upQuantity(id)),
     downQuantity: id => dispatch(downQuantity(id)),
-    deleteGame: id => dispatch(deleteGame(id))
+    deleteGame: id => dispatch(deleteGame(id)),
+    setTotal: value => dispatch(setTotal(value))
 });
 
 export default connect(MapStateToProps, MapDispatchToProps)(BasketContainer);

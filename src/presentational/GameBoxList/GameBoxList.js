@@ -13,8 +13,7 @@ class GameBoxList extends React.Component {
     }
 
     componentWillReceiveProps(nextProps) {
-        console.log("wow");
-        this.props.setPagesCount(Math.ceil(this.props.games.length / this.pageSize));
+        this.props.setPagesCount(Math.ceil(nextProps.games.length / this.pageSize));
     }
 
     handleClick(event, index) {

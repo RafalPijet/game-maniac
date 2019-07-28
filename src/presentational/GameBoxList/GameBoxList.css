@@ -7,10 +7,9 @@
 .box-list-main {
     display: flex;
     flex-wrap: wrap;
-    max-width: 1000px;
-    width: 100%;
+    width: 1000px;
     height: 850px;
-    justify-content: flex-end;
+    justify-content: space-around;
     overflow-y: auto;
 }
 

@@ -43,7 +43,7 @@ class AddToBasket extends React.Component {
 
     checkBasket() {
         this.props.basketGames.forEach(basketGame => {
-        console.log(basketGame.game.id === this.props.game.id);
+            
             if (basketGame.game.id === this.props.game.id) {
 
                 this.gameInBasket()

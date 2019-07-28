@@ -18,12 +18,12 @@ class GameBoxListContainer extends React.Component {
     }
 
     componentWillReceiveProps(nextProps, nextContext) {
-        setTimeout(() => this.setVisibleGames(), 1); /*ToDo*/
+        this.setVisibleGames(nextProps.foundGames, nextProps.games)
     }
 
-    setVisibleGames() {
-        this.props.foundGames.length !== 0 ? this.setState({visibleGames: this.props.foundGames}) :
-            this.setState({visibleGames: this.props.games})
+    setVisibleGames(foundGames, games) {
+        foundGames.length !== 0 ? this.setState({visibleGames: foundGames}) :
+            this.setState({visibleGames: games})
     }
 
     render() {
