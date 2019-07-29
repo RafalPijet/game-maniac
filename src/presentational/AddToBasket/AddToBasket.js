@@ -9,7 +9,8 @@ class AddToBasket extends React.Component {
         this.state = {
             description: "",
             disabled: false,
-            style: ""
+            style: "",
+            scale: false
         }
     }
 
@@ -18,7 +19,8 @@ class AddToBasket extends React.Component {
             this.setState({
                 description: "Dodaj do koszyka",
                 disabled: false,
-                style: "add-button"
+                style: "add-button ",
+                scale: false
             })
         ));
         setDefaultState()
@@ -26,11 +28,12 @@ class AddToBasket extends React.Component {
     }
 
     gameInBasket() {
-        this.setState({
+        this.setState({scale: true});
+        setTimeout(() => this.setState({
             description: "W koszyku",
             disabled: true,
-            style: "add-button-disabled"
-        });
+            style: "add-button-disabled "
+        }), 200);
     }
 
     addGameToBasket(game) {
@@ -43,7 +46,7 @@ class AddToBasket extends React.Component {
 
     checkBasket() {
         this.props.basketGames.forEach(basketGame => {
-            
+
             if (basketGame.game.id === this.props.game.id) {
 
                 this.gameInBasket()
@@ -54,7 +57,7 @@ class AddToBasket extends React.Component {
     render() {
         return (
             <div className="add-button-main">
-                <button className={this.state.style} disabled={this.state.disabled}
+                <button className={this.state.style + (this.state.scale ? "scaleDown" : "")} disabled={this.state.disabled}
                         onClick={() => this.addGameToBasket(this.props.game)}>{this.state.description}</button>
             </div>
         )

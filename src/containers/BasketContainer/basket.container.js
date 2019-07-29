@@ -35,7 +35,7 @@ class BasketContainer extends React.Component {
             totalInBasket = [...totalInBasket, (basketGame.game.price * basketGame.quantity)]
         });
 
-        if (this.props.basketGames.length !== 0) {
+        if (basketGames.length !== 0) {
             return Math.round((totalInBasket.reduce(sum) * 100)) / 100;
         }
     }

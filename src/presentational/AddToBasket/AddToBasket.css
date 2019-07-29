@@ -35,7 +35,18 @@
     outline: none;
 }
 
-.add-button:active {
-    background-color: #27ae60;
-    outline: none;
+.scaleDown {
+    animation: scaleToDown .2s;
 }
+
+@keyframes scaleToDown {
+      0% {
+          transform: scale(1);
+      }
+      50% {
+          transform: scale(.50);
+      }
+      100% {
+          transform: scale(0);
+      }
+  }
