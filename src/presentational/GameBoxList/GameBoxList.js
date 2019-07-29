@@ -40,7 +40,7 @@ class GameBoxList extends React.Component {
                     }
                 </div>
                 <div className="pagination-wrapper">
-                    <Pagination aria-label="Page navigation">
+                    <Pagination size="sm" aria-label="Page navigation">
                         <PaginationItem disabled={currentPage <= 0}>
                             <PaginationLink
                                 onClick={event => this.handleClick(event, currentPage - 1)}
