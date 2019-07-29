@@ -13,6 +13,7 @@ h2, h3 {
 }
 
 .box-main {
+    position: relative;
     font-family: "Sniglet-Regular";
     display: flex;
     flex-wrap: wrap;
@@ -23,9 +24,72 @@ h2, h3 {
     margin: 10px;
 }
 
+.box-status-promotion {
+    background-color: #f6e58d;
+    color: #eb4d4b;
+    font-family: "RobotoMono-Medium";
+    font-size: 16px;
+    position: absolute;
+    top: 27px;
+    right: -7px;
+    transform: rotate(45deg);
+    text-transform: uppercase;
+    text-align: center;
+    padding: 0 5px;
+    animation: promotion 1s infinite;
+}
+
+.box-status-novelty {
+    background-color: #c7ecee;
+    color: #686de0;
+    font-family: "RobotoMono-Medium";
+    font-size: 16px;
+    position: absolute;
+    top: 21px;
+    right: -4px;
+    transform: rotate(45deg);
+    text-transform: uppercase;
+    text-align: center;
+    padding: 0 5px;
+}
+
+.box-status-last-item {
+    background-color: #badc58;
+    color: #e056fd;
+    font-family: "RobotoMono-Medium";
+    font-size: 16px;
+    position: absolute;
+    top: 26px;
+    right: -1px;
+    transform: rotate(45deg);
+    text-transform: uppercase;
+    width: 90px;
+    text-align: center;
+    padding: 2px 5px;
+    line-height: 15px;
+}
+
 .box-row {
     width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+
+@keyframes promotion {
+    0% {
+        transform: scale(1) rotate(45deg);
+    }
+    25% {
+        transform: scale(1.15) rotate(45deg);
+    }
+    50% {
+        transform: scale(1.20) rotate(45deg);
+    }
+    75% {
+        transform: scale(1.15) rotate(45deg);
+    }
+    100% {
+        transform: scale(1) rotate(45deg);
+    }
 }

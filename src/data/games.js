@@ -55,6 +55,7 @@ const gamesData = [
         price: 119.99,
         oldPrice: 139.99,
         quantity: 11,
+        status: "promocja",
         description: "Ponad 13 milionów graczy stawiło czoła demonicznym hordom w Diablo III. Teraz twoja kolej, by " +
             "dołączyć do krucjaty i zmierzyć się z wrogami krain śmiertelników. " +
             "Wydanie Ultimate Evil Edition zawiera pełną wersję gry Diablo III oraz rozszerzenie Reaper of Souls. Szykuj" +
@@ -75,8 +76,9 @@ const gamesData = [
         image: DirtRally2,
         imageLarge: DirtRally2Large,
         price: 134.92,
-        oldPrice: 169.29,
+        oldPrice: "",
         quantity: 6,
+        status: "",
         description: "W DiRT Rally 2.0 będziesz się ścigać na najpopularniejszych trasach rajdowych na całym świecie," +
             " siedząc za kierownicą najpotężniejszych samochodów off-roadowych, jakie kiedykolwiek powstały. Pamiętaj, " +
             "że nawet najmniejszy błąd może być twoim ostatnim. Współpracuj ze swoim zespołem i wspólnymi siłami" +
@@ -101,8 +103,9 @@ const gamesData = [
         image: PES2020,
         imageLarge: PES2020Large,
         price: 219.65,
-        oldPrice: 259.99,
+        oldPrice: "",
         quantity: 16,
+        status: "nowość",
         description: "eFootball PES 2020 zapoczątkowuje nową dekadę wiodącej w branży symulacji piłki nożnej z odważną" +
             " obietnicą zrewolucjonizowania eFootballu i wprowadzenia tego sportu do globalnej publiczności. Seria PES " +
             "kontynuuje swoje dążenie do realizmu, wnosząc ze sobą kilka wpływowych zmian, które łączą każdą chwilę " +
@@ -124,6 +127,7 @@ const gamesData = [
         price: 79.99,
         oldPrice: 109.99,
         quantity: 8,
+        status: "promocja",
         description: "Tryb multiplayer w Call of Duty®: Advanced Warfare nabiera nowych wymiarów. System poruszania się " +
             "uległ znaczącej zmianie dzięki wprowadzeniu technologii egzoszkieletu. Nowy system nagród oznacza większe" +
             " możliwości personalizacji i dostosowywania różnych elementów trybu multiplayer w Call of Duty®. Zmodyfikowany" +
@@ -145,8 +149,9 @@ const gamesData = [
         image: EvilWithin,
         imageLarge: EvilWithinLarge,
         price: 99.92,
-        oldPrice: 119.69,
-        quantity: 15,
+        oldPrice: "",
+        quantity: 1,
+        status: "ostatnia sztuka",
         description: "The Evil Within, pierwotnie ochrzczony nazwą roboczą Zwei, to miks survival horroru i gry akcji z " +
             "perspektywy trzeciej osoby. Za tytuł odpowiada studio Tango Gameworks, kierowane przez japońskiego producenta" +
             " – Shinjiego Mikamiego, ojca takich gier jak Dino Crisis, Devil May Cry czy Onimusha. Deweloper jest znany" +
@@ -168,8 +173,9 @@ const gamesData = [
         image: BField5image,
         imageLarge: BField5imageLarge,
         price: 249.39,
-        oldPrice: 289.99,
+        oldPrice: "",
         quantity: 20,
+        status: "nowość",
         description: "Weź udział w największym konflikcie w historii w Battlefield™ V – " +
             "seria wraca do swoich korzeni dzięki zupełnie nowemu spojrzeniu na II wojnę światową.\n" +
             "Wraz ze swoim oddziałem weź udział w starciach wieloosobowych, w takich trybach jak ogromne Wielkie " +
@@ -184,8 +190,9 @@ const gamesData = [
         image: FarCry4,
         imageLarge: FarCry4Large,
         price: 59.99,
-        oldPrice: 99.19,
+        oldPrice: "",
         quantity: 4,
+        status: "",
         description: "Akcja rozegra się w Himalajach, w „zapierającym dech w piersiach, niebezpiecznym i dzikim regionie”" +
             " Kyrat. Gracze będą walczyć z reżimem despotycznego, samozwańczego króla. Nie zdradzono szczegółów dotyczących" +
             " rozgrywki. Twórcy zaznaczyli tylko, że odbiorcy skorzystają z „szerokiego wachlarza broni, pojazdów oraz" +
@@ -203,8 +210,9 @@ const gamesData = [
         image: Alien,
         imageLarge: AlienLarge,
         price: 62.09,
-        oldPrice: 99.19,
+        oldPrice: "",
         quantity: 19,
+        status: "ostatnia sztuka",
         description: "Alien: Isolation to pierwszoosobowy survival horror, osadzony w uniwersum filmowej serii Obcy." +
             " Za jego powstanie odpowiada brytyjskie studio Creative Assembly, znane przede wszystkim z doskonałej serii" +
             " strategicznej Total War. Wydawcą gry jest natomiast firma SEGA, posiadająca od wielu lat licencję na gry" +
@@ -223,8 +231,9 @@ const gamesData = [
         image: BFront2image,
         imageLarge: BFront2imageLarge,
         price: 175.29,
-        oldPrice: 199.79,
-        quantity: 5,
+        oldPrice: "",
+        quantity: 1,
+        status: "ostatnia sztuka",
         description: "Wyrusz w podróż do świata Star Wars™ w kolejnej odsłonie najpopularniejszej serii gier akcji Star Wars w HD. \n" +
             "\n" +
             "Dziesiątkuj szeregi wroga mieczem świetlnym w Bazie Starkiller. Jako pilot maszyny kroczącej AT-ST " +
@@ -240,8 +249,9 @@ const gamesData = [
         image: RedFaction,
         imageLarge: RedFactionLarge,
         price: 119.19,
-        oldPrice: 139.99,
+        oldPrice: "",
         quantity: 13,
+        status: "",
         description: "50 lat od wydarzeń z oryginalnej gry Red Faction, fabuła umożliwia graczom wcielenie się w rolę " +
             "powstańca i dołączenie do nowo powstałego ruchu Red Faction, walczącego z Earth Defence Force.\n" +
             "\n" +
@@ -262,8 +272,9 @@ const gamesData = [
         image: Surge2image,
         imageLarge: Surge2imageLarge,
         price: 234.79,
-        oldPrice: 269.99,
+        oldPrice: "",
         quantity: 78,
+        status: "nowość",
         description: "Po drodze do Jericho Twój samolot zostaje strącony przez tajemniczą burzę i rozbija się na " +
             "przedmieściach. Po kilku tygodniach budzisz się w mieście w zrujnowanym więzieniu. Uzbrojeni żołnierze " +
             "ogłaszają stan wojenny, roboty szaleją po ulicach, a nad miastem ciąży ciemna, rosnąca nanoburza. " +
@@ -287,6 +298,7 @@ const gamesData = [
         price: 118.19,
         oldPrice: 189.99,
         quantity: 31,
+        status: "promocja",
         description: "Weź udział w kolejnej części sagi wysoko ocenianej gry MMO – FINAL FANTASY® XIV Online dzięki nowemu," +
             " epickiemu rozszerzeniu fabularnemu – SHADOWBRINGERS!Odkryj zapierające dech w piersiach, nieznane dotąd " +
             "lokacje; spotkaj przedstawicieli nowych ras, opanuj do perfekcji nowe profesje i walcz ramię w ramię z " +
@@ -311,6 +323,7 @@ const gamesData = [
         price: 239.49,
         oldPrice: 259.99,
         quantity: 21,
+        status: "promocja",
         description: "Deluxe Edition zawiera Season Pass, 20 nowych samochodów, 20 nowych dekoracji na dach oraz mnóstwo" +
             " nowych opcji kustomizacji samochodów! \n" +
             "\n" +
@@ -338,8 +351,9 @@ const gamesData = [
         image: MotoGP19,
         imageLarge: MotoGP19Large,
         price: 149.98,
-        oldPrice: 189.99,
+        oldPrice: "",
         quantity: 11,
+        status: "",
         description: "Seria MotoGP™ 19 kolejny raz celebruje pasję do sportów motorowych!\n" +
             "Oficjalna gra wideo z najpopularniejszych mistrzostw motocykli na świecie powraca z nowym pełnym " +
             "niespodzianek arsenałem!\n" +
@@ -366,8 +380,9 @@ const gamesData = [
         image: Zombie,
         imageLarge: ZombieLarge,
         price: 179.25,
-        oldPrice: 199.29,
-        quantity: 2,
+        oldPrice: "",
+        quantity: 1,
+        status: "ostatnia sztuka",
         description: "Hordy Hitlera powrócą po więcej w nowej, mrożącej krew w żyłach strzelaninie Zombie Army 4: Dead War!" +
             "Czekają na ciebie wstrętni okultystyczni wrogowie, epicki arsenał i wstrząsająca nowa kampania dla 1-4 graczy" +
             " dziejąca się w Europie z lat 40. XX wieku, w której twoim zadaniem będzie uratowanie ludzkości przed nieumarłym Armagedonem! \n" +
@@ -392,8 +407,9 @@ const gamesData = [
         image: SoulCalibur,
         imageLarge: SoulCaliburLarge,
         price: 89.49,
-        oldPrice: 109.99,
+        oldPrice: "",
         quantity: 3,
+        status: "",
         description: "SOULCALIBUR VI to najnowsza część pionierskiej serii bijatyk 3D opartej na walce bronią białą. " +
             "Rozgrywająca się w XVI wieku akcja SOULCALIBURA VI zabierze graczy w podróż, podczas której odkryją prawdy " +
             "kryjące się w wydarzeniach z oryginalnego SOULCALIBURA. W grze znajdzie się również zróżnicowana lista " +
@@ -412,8 +428,9 @@ const gamesData = [
         image: Sniper,
         imageLarge: SniperLarge,
         price: 129.95,
-        oldPrice: 149.99,
+        oldPrice: "",
         quantity: 42,
+        status: "",
         description: "Sniper Elite V3 to strzelanka osadzona na terenach Afryki w trakcie II wojny światowej.  " +
             "Jest to trzecia część popularnej serii studia Rebellion. Identycznie jak w poprzednich częściach, gracz wciela się w postać Karla Fishburne’a, czyli strzelca wyborowego pracującego dla dowództwa amerykańskich sił zbrojnych. Rozgrywka składa się z serii misji, w większości polegających na wyeliminowaniu konkretnego celu. Głównym atutem gry jest rozbudowana mechanika snajperska, która bierze pod uwagę takie aspekty, jak prędkość i kierunek wiatru czy wpływ grawitacji na tor lotu kuli.\n" +
             "\n" +
@@ -435,6 +452,7 @@ const gamesData = [
         price: 79.55,
         oldPrice: 119.49,
         quantity: 12,
+        status: "promocja",
         description: "Oto Redview County. Rywalizacja pomiędzy policją i uczestnikami wyścigów ulicznych trwa tu dzień i" +
             " noc. Obie strony prowadzą wojnę o pozyskanie mediów społecznych, lokalnych i krajowych, próbując zdobyć " +
             "najlepsze auta, modyfikacje i gadżety techniczne. Ryzykuj wszystko. Nie ufaj nikomu. \n" +
@@ -464,8 +482,9 @@ const gamesData = [
         image: Fifa19,
         imageLarge: Fifa19Large,
         price: 109.11,
-        oldPrice: 139.99,
-        quantity: 27,
+        oldPrice: "",
+        quantity: 1,
+        status: "ostatnia sztuka",
         description: "EA SPORTS™ FIFA 19 Edycja Legacy* debiutuje 28 września na platformach PlayStation 3 i Xbox 360 z" +
             " najnowszymi strojami, klubami i składami z najlepszych lig z całego świata. Cechy rozgrywki i tryby gry " +
             "będą analogiczne jak w grach FIFA 18 i FIFA 17 na platformy PlayStation 3 i Xbox 360. Gra będzie dostępna w" +
@@ -507,6 +526,7 @@ const gamesData = [
         price: 119.19,
         oldPrice: 129.99,
         quantity: 7,
+        status: "promocja",
         description: "The Walking Dead to gra przygodowa autorstwa studia Telltale Games, znanego z epizodycznych" +
             " produkcji takich jak Sam and Max, Wallace and Gromit, Tales of Monkey Island, Back to the Future oraz" +
             " Jurassic Park. Całość bazuje na licencji wielokrotnie nagradzanej serii komiksowej stworzonej przez Roberta " +
