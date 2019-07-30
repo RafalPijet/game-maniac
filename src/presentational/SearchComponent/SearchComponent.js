@@ -40,7 +40,11 @@ class SearchComponent extends React.Component {
                            this.setState({inputStyle: "search-input"});
 
                            if (this.props.foundGames.length === 0) {
-                               this.setState({searchText: ""})
+                               this.setState({searchText: ""});
+                           }
+
+                           if (this.props.foundGames.length === this.props.games.length) {
+                               this.props.setSearchState(false);
                            }
                        }}/>
             </div>
@@ -51,7 +55,8 @@ class SearchComponent extends React.Component {
 const MapStateToProps = store => {
     return {
         foundGames: store.gamesReducer.foundGames,
-        searchState: store.valuesReducer.searchState
+        searchState: store.valuesReducer.searchState,
+        games: store.gamesReducer.games
     }
 };
 

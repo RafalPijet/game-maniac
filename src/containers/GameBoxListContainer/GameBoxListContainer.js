@@ -29,7 +29,7 @@ class GameBoxListContainer extends React.Component {
     render() {
         return <GameBoxList games={this.state.visibleGames} pagesCount={this.props.pagesCount}
                             currentPage={this.props.currentPage} setPagesCount={this.props.setPagesCount}
-                            setCurrentPage={this.props.setCurrentPage}/>
+                            setCurrentPage={this.props.setCurrentPage} searchState={this.props.searchState}/>
     }
 }
 
@@ -38,7 +38,8 @@ const MapStateToProps = store => {
         games: store.gamesReducer.games,
         foundGames: store.gamesReducer.foundGames,
         pagesCount: store.valuesReducer.pagesCount,
-        currentPage: store.valuesReducer.currentPage
+        currentPage: store.valuesReducer.currentPage,
+        searchState: store.valuesReducer.searchState
     }
 };
 

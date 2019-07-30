@@ -9,10 +9,20 @@ import "./GameBoxList.css";
 class GameBoxList extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            isSearchMode: false
+        };
         this.pageSize = 8;
     }
 
     componentWillReceiveProps(nextProps) {
+
+        if (nextProps.searchState && !this.state.isSearchMode) {
+            this.props.setCurrentPage(0);
+            this.setState({isSearchMode: true});
+        } else if (!nextProps.searchState) {
+            this.setState({isSearchMode: false});
+        }
         this.props.setPagesCount(Math.ceil(nextProps.games.length / this.pageSize));
     }
 
