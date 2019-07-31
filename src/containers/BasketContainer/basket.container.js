@@ -17,7 +17,10 @@ class BasketContainer extends React.Component {
     }
 
     componentWillReceiveProps(nextProps) {
-        this.checkQuantityOfBasket(nextProps.basketGames);
+        
+        if (!nextProps.summaryModalState) {
+            this.checkQuantityOfBasket(nextProps.basketGames);
+        }
     }
 
     checkQuantityOfBasket(basketGames) {
@@ -50,7 +53,8 @@ class BasketContainer extends React.Component {
 const MapStateToProps = store => {
     return {
         basketGames: store.basketReducer,
-        total: store.valuesReducer.total
+        total: store.valuesReducer.total,
+        summaryModalState: store.valuesReducer.summaryModalState
     }
 };
 

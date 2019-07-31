@@ -1,6 +1,28 @@
+@font-face {
+    font-family: "Helvetica-Bold";
+    src: url("../../data/fonts/Helvetica Bold.ttf");
+}
+
+th {
+    font-family: "Helvetica-Bold";
+}
+
+td {
+    font-family: "Helvetica";
+}
+
 .modal-header {
+    font-family: "Helvetica-Bold";
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #b2bec3;
+    padding: 10px;
+}
+
+.modal-footer {
+    font-family: "Helvetica-Bold";
+    background-color: #b2bec3;
+    display: flex;
+    justify-content: space-around;
 }
