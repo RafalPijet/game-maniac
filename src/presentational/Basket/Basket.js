@@ -5,15 +5,17 @@ import "./Basket.css";
 
 const Basket = props => (
     <div className="basket-main">
-        <h1>Koszyk</h1>
-        <h2 hidden={props.isHidden}>Twój koszyk jest pusty :(</h2>
-        {props.basketGames.map(basketGame => {
-            return (
-                <BasketItem key={basketGame.game.id} basketGame={basketGame} upQuantity={props.upQuantity}
-                deleteGame={props.deleteGame} downQuantity={props.downQuantity}/>
-            )
-        })}
-        <Total hidden={!props.isHidden} total={props.total}/>
+        <div className="basket-items">
+            <h1 className="basket-name" hidden={!props.isHidden}>Twój koszyk</h1>
+            <h3 className="basket-empty" hidden={props.isHidden}>Twój koszyk jest pusty :(</h3>
+            {props.basketGames.map(basketGame => {
+                return (
+                    <BasketItem key={basketGame.game.id} basketGame={basketGame} upQuantity={props.upQuantity}
+                                deleteGame={props.deleteGame} downQuantity={props.downQuantity}/>
+                )
+            })}
+        </div>
+        <Total setSummaryModalState={props.setSummaryModalState} hidden={!props.isHidden} total={props.total}/>
     </div>
 );
 

@@ -1,10 +1,12 @@
-import { SET_PAGES_COUNT, SET_CURRENT_PAGE, SET_TOTAL, SET_SEARCH_STATE } from "../actions/values-actions";
+import { SET_PAGES_COUNT, SET_CURRENT_PAGE, SET_TOTAL, SET_SEARCH_STATE,
+        SET_SUMMARY_MODAL_STATE} from "../actions/values-actions";
 
 const initialState = {
     pagesCount: 0,
     currentPage: 0,
     total: 0,
-    searchState: false
+    searchState: false,
+    summaryModalState: false
 };
 
 const valuesReducer = (state = initialState, action) => {
@@ -16,7 +18,9 @@ const valuesReducer = (state = initialState, action) => {
         case SET_TOTAL:
             return {...state, total: action.value};
         case SET_SEARCH_STATE:
-            return {...state, searchState: action.isTrue}
+            return {...state, searchState: action.isTrue};
+        case SET_SUMMARY_MODAL_STATE:
+            return {...state, summaryModalState: action.isTrue};
         default:
            return  state
     }

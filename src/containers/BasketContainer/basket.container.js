@@ -2,8 +2,7 @@ import React from "react";
 import {connect} from "react-redux";
 import Basket from "../../presentational/Basket/Basket";
 import { upQuantity, downQuantity, deleteGame } from "../../actions/basket-actions";
-import { setTotal } from "../../actions/values-actions";
-
+import {setSummaryModalState, setTotal} from "../../actions/values-actions";
 
 class BasketContainer extends React.Component {
     constructor(props) {
@@ -43,7 +42,8 @@ class BasketContainer extends React.Component {
     render() {
         return <Basket basketGames={this.props.basketGames} isHidden={this.state.hidden}
                        upQuantity={this.props.upQuantity} downQuantity={this.props.downQuantity}
-                       deleteGame={this.props.deleteGame} total={this.props.total}/>
+                       deleteGame={this.props.deleteGame} total={this.props.total}
+                       setSummaryModalState={this.props.setSummaryModalState}/>
     }
 }
 
@@ -58,7 +58,8 @@ const MapDispatchToProps = dispatch => ({
     upQuantity: id => dispatch(upQuantity(id)),
     downQuantity: id => dispatch(downQuantity(id)),
     deleteGame: id => dispatch(deleteGame(id)),
-    setTotal: value => dispatch(setTotal(value))
+    setTotal: value => dispatch(setTotal(value)),
+    setSummaryModalState: isTrue => dispatch(setSummaryModalState(isTrue))
 });
 
 export default connect(MapStateToProps, MapDispatchToProps)(BasketContainer);

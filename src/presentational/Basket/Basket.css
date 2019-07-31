@@ -1,3 +1,22 @@
 .basket-main {
     font-family: "Helvetica";
+    min-height: 897px;
+    width: 90vw;
+}
+
+.basket-items {
+    max-height: 800px;
+    overflow-y: auto;
+}
+
+.basket-name {
+    font-size: 30px;
+    text-align: left;
+}
+
+.basket-empty {
+    text-align: center;
+    margin-top: 100px;
+    font-size: 24px;
+    width: inherit;
 }
