@@ -5,7 +5,10 @@ export const SET_DISCOUNT = "SET_DISCOUNT";
 export const SET_SEARCH_STATE = "SET_SEARCH_STATE";
 export const SET_SUMMARY_MODAL_STATE = "SET_SUMMARY_MODAL_STATE";
 export const SET_DISCOUNT_MODAL_STATE = "SET_DISCOUNT_MODAL_STATE";
+export const SET_AFTER_PAY_MODAL_STATE = "SET_AFTER_PAY_MODAL_STATE";
 export const SET_SUPPLY_COST = "SET_SUPPLY_COST";
+export const SET_TOTAL_TO_PAY = "SET_TOTAL_TO_PAY";
+export const SET_DISCOUNT_IS_COUNTING = "SET_DISCOUNT_IS_COUNTING";
 
 export const setPagesCount = value => {
     return {
@@ -55,9 +58,30 @@ export const setDiscountModalState = isTrue => {
     }
 };
 
+export const setAfterPayModalState = isTrue => {
+    return {
+        type: SET_AFTER_PAY_MODAL_STATE,
+        isTrue
+    }
+};
+
+export const setDiscountIsCounting = isTrue => {
+    return {
+        type: SET_DISCOUNT_IS_COUNTING,
+        isTrue
+    }
+};
+
 export const setSupplyCost = value => {
     return {
         type: SET_SUPPLY_COST,
+        value
+    }
+};
+
+export const setTotalToPay = value => {
+    return {
+        type: SET_TOTAL_TO_PAY,
         value
     }
 };

@@ -1,5 +1,5 @@
 import {
-    ADD_BASKET_GAME, DELETE_BASKET_GAME,
+    ADD_BASKET_GAME, DELETE_BASKET_GAME, DELETE_ALL_BASKET_GAMES,
     UP_QUANTITY_OF_BASKET_GAME, DOWN_QUANTITY_OF_BASKET_GAME
 } from "../actions/basket-actions";
 
@@ -28,6 +28,8 @@ const basketReducer = (state = [], action) => {
                 ...state]);
         case DELETE_BASKET_GAME:
             return state.filter(basketGame => basketGame.game.id !== action.id);
+        case DELETE_ALL_BASKET_GAMES:
+            return [];
         case UP_QUANTITY_OF_BASKET_GAME:
             // return state.basketGames.map(basketGame => {
             //    

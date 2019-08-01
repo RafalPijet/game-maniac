@@ -7,7 +7,7 @@ const Total = props => (
         <div className="total-main">
             <div className="total-info">
                 <h3>Do zapłaty: {props.total} zł</h3>
-                <p>(bez kosztów dostawy)</p>
+                <p>(bez rabatu oraz kosztów dostawy)</p>
                 <button className="buy-now" onClick={() => props.setSummaryModalState(true)}>Kup teraz</button>
             </div>
         </div>

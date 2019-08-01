@@ -1,7 +1,7 @@
 import React from "react";
 import {connect} from "react-redux";
 import Basket from "../../presentational/Basket/Basket";
-import { upQuantity, downQuantity, deleteGame } from "../../actions/basket-actions";
+import {upQuantity, downQuantity, deleteGame} from "../../actions/basket-actions";
 import {setSummaryModalState, setTotal} from "../../actions/values-actions";
 
 class BasketContainer extends React.Component {
@@ -17,10 +17,7 @@ class BasketContainer extends React.Component {
     }
 
     componentWillReceiveProps(nextProps) {
-        
-        if (!nextProps.summaryModalState) {
-            this.checkQuantityOfBasket(nextProps.basketGames);
-        }
+        this.checkQuantityOfBasket(nextProps.basketGames);
     }
 
     checkQuantityOfBasket(basketGames) {
