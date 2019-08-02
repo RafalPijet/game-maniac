@@ -1,5 +1,19 @@
 .home-main {
+    width: 1550px;
+    position: absolute;
+    top: 0;
+}
+
+.elements-main {
     display: flex;
-    width: 90vw;
+    justify-content: center;
+    position: absolute;
+    left: 168px;
+    top: 706px;
+    z-index: 30;
+}
+
+.carousel-main {
+    display: flex;
     justify-content: center;
 }

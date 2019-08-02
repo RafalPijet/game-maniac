@@ -1,0 +1,19 @@
+.carousel-caption {
+    bottom: 180px !important;
+    left: 85% !important;
+    width: 200px;
+}
+
+.carousel-caption h3 {
+    text-shadow: 5px 5px 5px #22a6b3;
+    text-align: center;
+    margin: 0 auto 10px;
+}
+
+.carousel-caption p {
+    text-align: center;
+}
+
+.check-button {
+    width: 120px;
+}

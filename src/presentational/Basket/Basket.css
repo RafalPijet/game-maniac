@@ -2,10 +2,13 @@
     font-family: "Helvetica";
     min-height: 897px;
     width: 90vw;
+    background-color: #fff;
+    margin-top: 20px;
+    padding: 10px;
 }
 
 .basket-items {
-    max-height: 800px;
+    max-height: 1200px;
     overflow-y: auto;
 }
 

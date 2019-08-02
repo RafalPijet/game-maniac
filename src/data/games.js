@@ -6,8 +6,10 @@ import xbox360 from "../data/pictures/logo_xbox_360.png";
 import xboxOne from "../data/pictures/logo_xbox_one.png";
 import BField5image from "../data/pictures/battlefield-v-200x249.jpg";
 import BField5imageLarge from "../data/pictures/battlefield-v-957x1200.jpg";
+import BField5Carousel from "../data/images/Battlefield_5_1_1520x855.jpg";
 import BFront2image from "../data/pictures/star-wars-battlefront-2-200x249.jpg";
 import BFront2imageLarge from "../data/pictures/star-wars-battlefront-2-1000x1246.jpg";
+import BFront3Carousel from "../data/images/battlefront-2-1520x855.jpg";
 import Diablo3image from "../data/pictures/diablo-iii-ultimate-200x245.jpg";
 import Diablo3imageLarge from "../data/pictures/diablo-iii-ultimate-653x800.jpg";
 import Surge2image from "../data/pictures/the-surge-2-200x253.jpg";
@@ -32,6 +34,7 @@ import CallOfDuty from "../data/pictures/call-of-duty-advanced-warfare-200x230.j
 import CallOfDutyLarge from "../data/pictures/call-of-duty-advanced-warfare-687x790.jpg";
 import Alien from "../data/pictures/obcy-izolacja-200x230.jpg";
 import AlienLarge from "../data/pictures/obcy-izolacja-800x920.jpg";
+import AlienCarousel from "../data/images/alien-izolation_1520x855.jpg";
 import Sniper from "../data/pictures/sniper-elite-3-200x231.jpg";
 import SniperLarge from "../data/pictures/sniper-elite-3-693-800.jpg";
 import Fifa19 from "../data/pictures/fifa-19-200x231.jpg";
@@ -172,6 +175,7 @@ const gamesData = [
         platform: ps4,
         image: BField5image,
         imageLarge: BField5imageLarge,
+        imageCarousel: BField5Carousel,
         price: 249.39,
         oldPrice: "",
         quantity: 20,
@@ -209,6 +213,7 @@ const gamesData = [
         platform: ps3,
         image: Alien,
         imageLarge: AlienLarge,
+        imageCarousel: AlienCarousel,
         price: 62.09,
         oldPrice: "",
         quantity: 19,
@@ -230,6 +235,7 @@ const gamesData = [
         platform: ps4,
         image: BFront2image,
         imageLarge: BFront2imageLarge,
+        imageCarousel: BFront3Carousel,
         price: 175.29,
         oldPrice: "",
         quantity: 1,

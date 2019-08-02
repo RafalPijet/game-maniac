@@ -12,7 +12,13 @@ nav {
 }
 
 .header-main {
-    margin: 10px 0 30px;
+    margin-top: 20px;
+    position: relative;
+    z-index: 3;
+    background-color: #fff;
+    opacity: 0.8;
+    box-shadow: 2px 5px 5px #fff;
+    border-radius: 10px;
 }
 
 .logo {
@@ -27,7 +33,7 @@ nav {
 
 .item {
     font-family: "MyriadPro-Regular";
-    font-size: 18px;
+    font-size: 20px;
     color: #7f8c8d;
     padding: 5px 10px;
     text-decoration: none;

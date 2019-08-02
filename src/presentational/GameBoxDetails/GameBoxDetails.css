@@ -18,7 +18,10 @@ p {
     justify-content: center;
     width: 100%;
     font-family: "Sniglet-Regular";
-    min-height: 897px;
+    min-height: 1400px;
+    background-color: #fff;
+    margin-top: 20px;
+    padding: 20px;
 }
 
 .box-details-prices {

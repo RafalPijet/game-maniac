@@ -50,9 +50,10 @@ class GameBoxList extends React.Component {
                     }
                 </div>
                 <div className="pagination-wrapper">
-                    <Pagination size="sm" aria-label="Page navigation">
+                    <Pagination aria-label="Page navigation">
                         <PaginationItem disabled={currentPage <= 0}>
                             <PaginationLink
+                                className="bg-dark text-warning border-dark"
                                 onClick={event => this.handleClick(event, currentPage - 1)}
                                 previous
                                 href="#"
@@ -60,13 +61,14 @@ class GameBoxList extends React.Component {
                         </PaginationItem>
                         {[...Array(this.props.pagesCount)].map((page, i) => (
                             <PaginationItem active={i === currentPage} key={i}>
-                                <PaginationLink onClick={event => this.handleClick(event, i)} href="#">
+                                <PaginationLink className="bg-dark text-warning border-dark" onClick={event => this.handleClick(event, i)} href="#">
                                     {i + 1}
                                 </PaginationLink>
                             </PaginationItem>
                         ))}
                         <PaginationItem disabled={currentPage >= this.props.pagesCount - 1}>
                             <PaginationLink
+                                className="bg-dark text-warning border-dark"
                                 onClick={event => this.handleClick(event, currentPage + 1)}
                                 next
                                 href="#"

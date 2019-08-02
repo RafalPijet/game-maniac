@@ -1,4 +1,5 @@
 .container {
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -13,3 +14,11 @@ h2 {
 button {
     outline: none !important;
 }
+
+@media (min-width: 1200px) {
+    .container {
+         max-width: 1550px !important;
+    }
+}
+
+

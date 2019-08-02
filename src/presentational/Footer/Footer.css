@@ -4,12 +4,14 @@
     justify-content: space-between;
     font-family: "Helvetica";
     align-items: center;
-    padding-top: 20px;
-    margin-top: 50px;
+    position: absolute;
+    bottom: -430px;
+    margin-bottom: 100px;
 }
 
 .author {
     font-size: 15px;
+    color: #b2bec3;
 }
 
 .footer-item {
@@ -18,8 +20,8 @@
     padding: 0 10px;
 }
 
-.active {
-    color: #2c3e50;
+.active-footer {
+    color: #fff;
 }
 
 .footer-item:hover {
