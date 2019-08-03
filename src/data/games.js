@@ -1,4 +1,3 @@
-import uuid from "uuid";
 import pc from "../data/pictures/logo_pc.png";
 import ps3 from "../data/pictures/logo_ps3.png";
 import ps4 from "../data/pictures/logo_ps4.png";
@@ -50,7 +49,7 @@ import WalkingDeadLarge from "../data/pictures/walking-dead-game-560x800.jpg";
 
 const gamesData = [
     {
-        id: uuid.v4(),
+        id: "bb7de049-7e06-4c0b-a120-f864070b2296",
         name: "Diablo 3",
         platform: ps4,
         image: Diablo3image,
@@ -73,7 +72,7 @@ const gamesData = [
             "przestrzeni wszystkich pięciu aktów; przemierzaj otwarty świat w trybie przygodowym lub poluj na pradawne demony i potwory, które czają się w mrocznych ostępach krain śmiertelników."
     },
     {
-        id: uuid.v4(),
+        id: "87cd2d7f-5802-4779-ae1b-c088160f9847",
         name: "Dirt Rally 2.0",
         platform: pc,
         image: DirtRally2,
@@ -100,7 +99,7 @@ const gamesData = [
             " zarządzaj ludźmi i stwórz własną aleję serwisową."
     },
     {
-        id: uuid.v4(),
+        id: "b511a565-084c-4d22-8706-90bc78182321",
         name: "PES 2020",
         platform: xboxOne,
         image: PES2020,
@@ -122,7 +121,7 @@ const gamesData = [
             "ulepszeniom graficznym i dźwiękowym.\n"
     },
     {
-        id: uuid.v4(),
+        id: "566285cd-d5b0-4972-8ad9-efa97872c6ed",
         name: "Call of Duty",
         platform: ps3,
         image: CallOfDuty,
@@ -146,7 +145,7 @@ const gamesData = [
             " bardziej zróżnicowana."
     },
     {
-        id: uuid.v4(),
+        id: "0305211c-3653-439d-961d-e85f559cf867",
         name: "The Evil Within",
         platform: xbox360,
         image: EvilWithin,
@@ -170,7 +169,7 @@ const gamesData = [
             " świecie pełnym agresywnych i krwiożerczych maszkar. "
     },
     {
-        id: uuid.v4(),
+        id: "31ca21ce-8953-4db6-9d74-1f9a7fc85c53",
         name: "Battlefield 5",
         platform: ps4,
         image: BField5image,
@@ -188,7 +187,7 @@ const gamesData = [
             " na całym świecie, możesz cieszyć się największą i najbardziej wciągającą grą z serii Battlefield. \n"
     },
     {
-        id: uuid.v4(),
+        id: "1e436dd4-b51b-4c0f-b3f7-531e238d4d1b",
         name: "Far Cry 4",
         platform: xbox360,
         image: FarCry4,
@@ -208,7 +207,7 @@ const gamesData = [
             " w nadchodzących miesiącach.\n"
     },
     {
-        id: uuid.v4(),
+        id: "ad7750dc-1540-4069-879a-a5a35b9212a8",
         name: "Obcy Izolacja",
         platform: ps3,
         image: Alien,
@@ -230,7 +229,7 @@ const gamesData = [
             " śmiertelnego zagrożenia stanowić będą istotną część fabuły. "
     },
     {
-        id: uuid.v4(),
+        id: "c0f681a6-3897-4673-b561-ec3ec057e49d",
         name: "Battlefront 2",
         platform: ps4,
         image: BFront2image,
@@ -249,7 +248,7 @@ const gamesData = [
             "poznaj porywającą, pełną emocji opowieść, której fabuła obejmuje okres 30 lat."
     },
     {
-        id: uuid.v4(),
+        id: "ea3b73a2-f921-4ae5-8493-e38cb56ecab5",
         name: "Red Faction Guerrilla",
         platform: xboxOne,
         image: RedFaction,
@@ -272,7 +271,7 @@ const gamesData = [
             "Dodane wsparcie dla rozdzielczości 4K "
     },
     {
-        id: uuid.v4(),
+        id: "5ea8bd5c-d843-475b-a16b-208c3e9af339",
         name: "Surge 2",
         platform: ps4,
         image: Surge2image,
@@ -296,7 +295,7 @@ const gamesData = [
             "Bogaty rozwój postaci i możliwości personalizacji"
     },
     {
-        id: uuid.v4(),
+        id: "d04ec79a-cbba-4ba7-89c3-33a379513ac7",
         name: "Final Fantasy XIV",
         platform: pc,
         image: FinalFantasy,
@@ -321,7 +320,7 @@ const gamesData = [
             "Przeżyj na nowo przygody z przeszłości z obecnym poziomem zaawansowania postaci oraz ekwipunkiem dzięki systemowi New Game+"
     },
     {
-        id: uuid.v4(),
+        id: "f68ef148-d6f5-4856-b6a5-eef120923a34",
         name: "Wreckfest Deluxe Edition",
         platform: xboxOne,
         image: Wreckfest,
@@ -351,7 +350,7 @@ const gamesData = [
             "ruchem ulicznym."
     },
     {
-        id: uuid.v4(),
+        id: "d37406d0-45c0-413c-85cf-75c35f2de00d",
         name: "MotoGP 19",
         platform: pc,
         image: MotoGP19,
@@ -380,7 +379,7 @@ const gamesData = [
             "- 3 dodatkowe historyczne tory"
     },
     {
-        id: uuid.v4(),
+        id: "8f97b53b-9717-456a-b18d-033a94be9f3e",
         name: "Zombie Army 4 Dead War",
         platform: xboxOne,
         image: Zombie,
@@ -407,7 +406,7 @@ const gamesData = [
             " nowe stroje, emocje i kpiny dla swojej postaci."
     },
     {
-        id: uuid.v4(),
+        id: "adef23ca-5e11-4fc6-b5d3-ff3fa540bf35",
         name: "Soul Calibur VI",
         platform: pc,
         image: SoulCalibur,
@@ -428,7 +427,7 @@ const gamesData = [
             "Duża lista wojowników z różnym stylem walki, w tym Geralt – najsłynniejszy z wiedźminów"
     },
     {
-        id: uuid.v4(),
+        id: "bddae2ca-851d-406b-a537-290bc67c26fe",
         name: "Sniper Elite III Afrika PL",
         platform: ps3,
         image: Sniper,
@@ -450,7 +449,7 @@ const gamesData = [
             "single/coop"
     },
     {
-        id: uuid.v4(),
+        id: "cc362ff9-3e00-431e-8fc9-c32a4d36722a",
         name: "Need for Speed Rivals",
         platform: xbox360,
         image: NeedForSpeed,
@@ -482,7 +481,7 @@ const gamesData = [
             "ze stron wybierzesz, będziesz mieć do pomocy technikę ułatwiającą uzyskanie przewagi nad rywalem."
     },
     {
-        id: uuid.v4(),
+        id: "874c8a6e-5efc-4577-b760-94a32a6cfc75",
         name: "Fifa 19",
         platform: ps3,
         image: Fifa19,
@@ -524,7 +523,7 @@ const gamesData = [
             "W trybie FIFA Ultimate Team w Edycji Legacy gry FIFA 19 nie będą dostępne IKONY FUT."
     },
     {
-        id: uuid.v4(),
+        id: "195aeaac-43e8-4fa1-9968-5acaec24019f",
         name: "The Walking Dead",
         platform: xbox360,
         image: WalkingDead,

@@ -1,9 +1,13 @@
 .regulations-main {
+    position: absolute;
+    top: 150px;
     background-color: #fff;
     padding-right: 90px;
     margin-top: 20px;
     height: 1350px;
     overflow-y: auto;
+    max-width: 1550px;
+    width: 100%;
 }
 
 .regulation-item {
