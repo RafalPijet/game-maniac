@@ -1,0 +1,12 @@
+.regulations-main {
+    background-color: #fff;
+    padding-right: 90px;
+    margin-top: 20px;
+    height: 1350px;
+    overflow-y: auto;
+}
+
+.regulation-item {
+    display: flex;
+    justify-content: space-between;
+}
