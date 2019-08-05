@@ -1,7 +1,10 @@
 .basket-main {
     font-family: "Helvetica";
     min-height: 1350px;
-    width: 90vw;
+    position: absolute;
+    top: 150px;
+    max-width: 1350px;
+    width: 100%;
     background-color: #fff;
     margin-top: 20px;
     padding: 10px;

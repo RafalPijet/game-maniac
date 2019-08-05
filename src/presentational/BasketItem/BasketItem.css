@@ -20,7 +20,7 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    width: 80vw;
+    width: inherit;
 }
 
 .basket-info {

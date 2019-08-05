@@ -1,30 +1,26 @@
 import React from "react";
-import {
-    Carousel,
-    CarouselItem,
-    CarouselControl,
-    CarouselCaption,
-    Button
-} from "reactstrap";
-import { Link } from "react-router-dom";
+import {Carousel, CarouselControl, CarouselItem} from "reactstrap";
+import CarouselSlide from "../../presentational/CarouselSlide/CarouselSlide";
 import data from "../../data/games";
-import "./HomeCarousel.css";
 
 const items = [
     {
+        id: data[7].id,
+        name: data[7].name,
         src: data[7].imageCarousel,
-        caption: data[7].price,
-        button: <Link to={'/game/' + data[7].id}><Button className="check-button" color="info">Sprawdź</Button></Link>
+        price: data[7].price
     },
     {
+        id: data[8].id,
+        name: data[8].name,
         src: data[8].imageCarousel,
-        caption: data[8].price,
-        button: <Link to={'/game/' + data[8].id}><Button className="check-button" color="info">Sprawdź</Button></Link>
+        price: data[8].price
     },
     {
+        id: data[5].id,
+        name: data[5].name,
         src: data[5].imageCarousel,
-        caption: data[5].price,
-        button: <Link to={'/game/' + data[5].id}><Button className="check-button" color="info">Sprawdź</Button></Link>
+        price: data[5].price,
     }
 ];
 
@@ -72,10 +68,9 @@ class HomeCarousel extends React.Component {
                 <CarouselItem
                     onExiting={this.onExiting}
                     onExited={this.onExited}
-                    key={item.src}
+                    key={item.id}
                 >
-                    <img src={item.src} alt={item.altText} />
-                    <CarouselCaption captionHeader={item.caption + " zł"} captionText={item.button}/>
+                    <CarouselSlide src={item.src} name={item.name} price={item.price} id={item.id}/>
                 </CarouselItem>
             );
         });

@@ -1,6 +1,7 @@
 .footer-main {
     display: flex;
-    width: 90vw;
+    max-width: 1350px;
+    width: 100%;
     justify-content: space-between;
     font-family: "Helvetica";
     align-items: center;

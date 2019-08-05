@@ -13,9 +13,12 @@ p {
 }
 
 .box-details-main {
+    position: absolute;
+    top: 150px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
+    max-width: 1350px;
     width: 100%;
     font-family: "Sniglet-Regular";
     height: 1350px;
