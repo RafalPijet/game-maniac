@@ -1,0 +1,23 @@
+.faq-main {
+    background-color: #fff;
+    position: absolute;
+    top: 150px;
+    max-width: 1350px;
+    width: 100%;
+    margin-top: 20px;
+    overflow-y: auto;
+    height: 1350px;
+}
+
+.ask {
+    color: #686de0;
+    cursor: pointer;
+    text-align: center;
+    width: inherit;
+    padding: 15px 0;
+}
+
+.ask:hover {
+    background-color: #686de0;
+    color: #fff;
+}

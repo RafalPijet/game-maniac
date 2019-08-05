@@ -19,7 +19,7 @@ const GameBoxDetails = props => {
             <AddToBasket game={props.game}/>
         </div>
         <iframe width="800" height="450" src={"https://www.youtube.com/embed/" + props.game.youtube} frameBorder="0"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title={props.game.youtube}
                 allowFullScreen></iframe>
     </div>
 )};
