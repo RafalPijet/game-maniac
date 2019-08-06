@@ -1,6 +1,6 @@
 import React from "react";
 import "./CompanyComponent.css";
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 
 const CompanyComponent = props => (
     <div className="company-main">

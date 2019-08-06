@@ -1,6 +1,8 @@
-import { SET_PAGES_COUNT, SET_CURRENT_PAGE, SET_TOTAL, SET_DISCOUNT, SET_SEARCH_STATE, SET_TOTAL_TO_PAY,
-        SET_SUMMARY_MODAL_STATE, SET_DISCOUNT_MODAL_STATE, SET_SUPPLY_COST,
-        SET_DISCOUNT_IS_COUNTING, SET_AFTER_PAY_MODAL_STATE } from "../actions/values-actions";
+import {
+    SET_PAGES_COUNT, SET_CURRENT_PAGE, SET_TOTAL, SET_DISCOUNT, SET_SEARCH_STATE, SET_TOTAL_TO_PAY,
+    SET_SUMMARY_MODAL_STATE, SET_DISCOUNT_MODAL_STATE, SET_SUPPLY_COST,
+    SET_DISCOUNT_IS_COUNTING, SET_AFTER_PAY_MODAL_STATE
+} from "../actions/values-actions";
 
 const initialState = {
     pagesCount: 0,
@@ -41,7 +43,7 @@ const valuesReducer = (state = initialState, action) => {
         case SET_TOTAL_TO_PAY:
             return {...state, totalToPay: action.value};
         default:
-           return state
+            return state
     }
 };
 

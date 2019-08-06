@@ -46,6 +46,16 @@ import NeedForSpeed from "../data/pictures/need-for-speed-200x282.jpg";
 import NeedForSpeedLarge from "../data/pictures/need-for-speed-567x800.jpg";
 import WalkingDead from "../data/pictures/walking-dead-game-200x286.jpg";
 import WalkingDeadLarge from "../data/pictures/walking-dead-game-560x800.jpg";
+import AceCombat from "../data/pictures/ace-combat-7-200x251.jpg";
+import AceCombatLarge from "../data/pictures/ace-combat-7-763x958.jpg";
+import AceCombatCarousel from "../data/images/ace-combat7-1520x855.jpg";
+import Resident from "../data/pictures/resident-evil-7-200x251.jpg";
+import ResidentLarge from "../data/pictures/resident-evil-7-758x949.jpg";
+import Gta from "../data/pictures/grand-theft-auto-v-200x253.jpg";
+import GtaLarge from "../data/pictures/grand-theft-auto-v-632x800.jpg";
+import DarkSoul from "../data/pictures/dark-soul-200x282.jpg";
+import DarkSoulLarge from "../data/pictures/dark-soul-800x1128.jpg";
+import DarkSoulCarousel from "../data/images/dark-soul-1520x855.jpg";
 
 const gamesData = [
     {
@@ -565,6 +575,98 @@ const gamesData = [
             " postacie znane z kadrów komiksu oraz dowiedzieć się o nich dodatkowych informacji. Gra została podzielona " +
             "na pięć epizodów, a ukończenie każdego z nich zajmuje średnio około dwóch godzin."
     },
+    {
+        id: "165b3a15-2edb-4e5b-a51a-2c7dab2443ac",
+        name: "Ace Combat 7",
+        platform: ps4,
+        image: AceCombat,
+        imageLarge: AceCombatLarge,
+        imageCarousel: AceCombatCarousel,
+        price: 169.99,
+        oldPrice: 219.99,
+        quantity: 17,
+        status: "promocja",
+        youtube: "KQCDj3emnHk",
+        description: "Zostań asem lotniczym i gnaj przez fotorealistyczne przestworza, poruszając się w dowolnym kierunku.\n" +
+            "\n" +
+            "Zestrzeliwuj wrogie samoloty i daj się porwać realistycznym opowieściom! \n" +
+            "Walka powietrzna nigdy nie wyglądała lepiej i nie dostarczała większych wrażeń!\n" +
+            "Projekt Aces ma zrewolucjonizować niebo, dostarczając tak realistycznych doświadczeń, że poczujecie się, jakbyście pilotowali prawdziwy samolot! \n" +
+            "Pogoda i otoczenie wpływają na twój samolot i HUD, co gwarantuje realizm, jakiego jeszcze nie było w lotniczej grze akcji. Czekają cię zdumiewające walki powietrzne. Produkcja powstała w oparciu o silnik Unreal Engine 4, co umożliwiło autorom opracowanie pełnych detali modeli samolotów oraz map, które równie dobrze wyglądają z dużych wysokości jak i na niskich pułapach. \n" +
+            "Dodatkową atrakcją jest pełne wsparcie dla okularów wirtualnej rzeczywistości PlayStation VR.\n" +
+            "\n" +
+            "Gra osadzona jest w alternatywnej rzeczywistości, gdzie historia Ziemi potoczyła się inaczej, doprowadzając do powstania odmiennych państw oraz wpływając na zmiany technologiczne, umożliwiające tworzenie jednostek latających nieistniejących w naszym świecie. \n" +
+            "Zgodnie z tradycjami serii, gra kładzie bardzo duży nacisk na fabułę, która rozwijana jest zarówno poprzez wydarzenia podczas misji jak i liczne sceny przerywnikowe."
+
+    },
+    {
+        id: "1c657448-d61b-4801-bf8f-bf802787a23f",
+        name: "Dark Souls II",
+        platform: pc,
+        image: DarkSoul,
+        imageLarge: DarkSoulLarge,
+        imageCarousel: DarkSoulCarousel,
+        price: 151.99,
+        oldPrice: "",
+        quantity: 17,
+        status: "",
+        youtube: "U6uyuIQYlfY",
+        description: "Wszystkich graczy czeka w DARK SOULS™ II: Scholar of the First Sin duża niespodzianka. W zapierającym dech w piersiach świecie czeka na ciebie niezapomniana przygoda. Na każdym kroku natkniesz się na niespodziewane starcia, które sprawdzą twoją wytrwałość. Poznaj rzeczy, które dosłownie nie mieszczą się w głowie, odkryj niewiarygodne wyzwania i zdobądź niezwykle satysfakcjonujące nagrody. Niezależnie od tego, czy znasz już grę DARK SOULS™ II, czy dopiero rozpoczynasz swoją przygodę z tą obsypaną nagrodami serią, nowa, reżyserska wersja tytułu dostarczy ci zupełnie nowych wrażeń.\n" +
+            "\n" +
+            " \n" +
+            "\n" +
+            "Ostateczna edycja DARK SOULS™ II - DARK SOULS™ II: Scholar of the First Sin zawiera całą udostępnioną dotąd zawartość DARK SOULS™ II oraz wiele innych elementów - w jednym pakiecie!\n" +
+            "Zupełnie nowe wrażenia i wyzwania - ulepszony rozkład przeciwników w grze zapewnia inną dynamikę walki niż we wcześniejszej wersji. Bezpieczne strefy zapamiętane przez niektórych graczy wcale nie są już tak bezpieczne! Nowy najeźdźca NPC o imieniu Forlorn odgrywać będzie kluczową rolę w zmienianiu rozgrywki. Nawet najbardziej doświadczeni z graczy będą musieli zapomnieć wszystko, co pamiętają o DARK SOULS™ II.\n" +
+            "Gra w sieci została poprawiona poprzez dodanie specjalnego przedmiotu normującego zdobywane w bitwie dusze – można teraz regularniej dołączać do określonych graczy podczas rozgrywki w sieci. Zwiększona została również liczba postaci mogących brać udział w jednej sesji z 4 do 6 osób, co całkowicie zmienia dynamikę rozgrywki sieciowej.\n" +
+            " \n" +
+            "\n" +
+            "DARK SOULS™ II: Scholar of the First Sin wynosi atmosferę dezorientacji oraz wciągającą rozgrywkę, z których znana jest seria DARK SOULS™, na zupełnie nowy poziom. Rozpocznij mroczną przygodę i pokonaj potężnych wrogów, diaboliczne niebezpieczeństwa oraz bezlitosne wyzwania.\n" +
+            "\n"
+
+    },
+    {
+        id: "d5cd43b6-8cc4-4449-a7a3-a5f1dc6c5f83",
+        name: "Resident Evil 7 Biohazard",
+        platform: ps4,
+        image: Resident,
+        imageLarge: ResidentLarge,
+        price: 69.99,
+        oldPrice: "",
+        quantity: 1,
+        status: "ostatnia sztuka",
+        youtube: "WV5J1TeDN7A",
+        description: "Resident Evil™ 7 biohazard wyznacza nowy kurs dla serii Resident Evil™ powracając do korzeni i prezentując prawdziwie przerażający horror. Akcja gry przeniesie nas do złowieszczej posiadłości na amerykańskiej plantacji, tuż po dramatycznych wydarzeniach z Resident Evil 6. Po raz pierwszy w historii serii gracze doświadczą grozy z perspektywy pierwszej osoby. Łącząc najbardziej charakterystyczne elementy rozgrywki z napiętą atmosferą, która dwadzieścia lat temu ukuła termin „survival horror”, Resident Evil 7 biohazard dostarczy zatrważająco realistyczne wrażenia, które zdefiniują nową erę w gatunku horroru. \n" +
+            "\n" +
+            "Cechy gry: \n" +
+            "Wrota do nowej ery horroru – Kolejna ważna odsłona w serii Resident Evil przejdzie drastyczną zmianę związaną z pojawieniem się na konsole nowej generacji, komputery PC i PlayStation VR\n" +
+            "Powrót do korzeni serii – Resident Evil 7 biohazard zawierać będzie najbardziej charakterystyczne elementy, takie jak eksploracja, zagadki i poczucie napiętej atmosfery grozy, oferując równocześnie całkowite odświeżenie systemu rozgrywki, by wynieść gatunek survival horroru na wyższy poziom\n" +
+            "Wciągający i emocjonujący horror – Zmiana w serii związana ze zmianą perspektywy na pierwszą osobę sprawia, że horror stanie się jeszcze bliższy i bardziej osobisty; kompatybilność z PSVR pogłębi to doznanie jeszcze bardziej\n" +
+            "Zbudowana od podstaw na silniku RE Engine – Stworzony przez Capcom kompletnie nowy silnik kompatybilny z VR działa z wiodącymi technologiami audio i wideo, dzięki czemu tworzy zatrważające, fotorealistyczne doświadczenie na niespotykanym dotychczas poziomie immersji\n" +
+            "Dostań się na plantację już teraz – Samodzielna wersja demonstracyjna „Beginning Hour”, dostępna dla użytkowników PlayStation Plus, pozwoli zapoznać się graczom z tym, czego oczekują od Resident Evil 7 biohazard. Zbudowane na podstawie zeszłorocznego dema technicznego „Kitchen” na PlayStation VR, akcja „Beginning Hour” przeniesie gracza do rozpadającej się chatki będącej częścią złowrogiej posiadłości. Czy graczom uda się stamtąd wydostać bez szwanku?"
+
+    },
+    {
+        id: "48b6e42c-d29f-4c8e-bdc6-a6d4d933e5b3",
+        name: "Grand Theft Auto V",
+        platform: xboxOne,
+        image: Gta,
+        imageLarge: GtaLarge,
+        price: 119.59,
+        oldPrice: "199.59",
+        quantity: 12,
+        status: "promocja",
+        youtube: "I_odP7eXdhY",
+        description: "Doceniony przez krytyków i bijący wszelkie rekordy otwarty świat Grand Theft Auto V wkracza na urządzenia nowej generacji. \n" +
+            "\n" +
+            "Grand Theft Auto V w pełni wykorzysta moc drzemiącą w PlayStation®4, Xbox One oraz PC. Ulepszenia są znaczne i dotyczą wyższej rozdzielczości, poziomu detali, natężenia ruchu ulicznego, dłuższego dystansu renderowania obiektów, zmian w sztucznej inteligencji, nowej fauny, wyglądu wody oraz efektów pogodowych i modelu zniszczeń. Los Santos to skąpana w słońcu i tętniąca życiem metropolia zamieszkana przez przeróżnej maści mentorów, psychoterapeutów, sławy wielkiego ekranu i blednące gwiazdki. Niegdyś to miejsce stanowiło obiekt zazdrości całego Zachodu, teraz z trudem walczy o utrzymanie swojego statusu w czasach gospodarczej niepewności i zalewu telewizyjnej taniochy. W tym tyglu trzech różnych kryminalistów spróbuje postawić wszystko na jedną kartę i wykonać skok, który odmieni ich życie. \n" +
+            "\n" +
+            "Największy i najbardziej dynamiczny otwarty świat, jaki do tej pory stworzono, zostanie jeszcze bardziej dopracowany. Grand Theft Auto V łączy w sobie doskonałą fabułę i trzymającą w napięciu rozgrywkę, a gracze mogą swobodnie wcielać się w trójkę bohaterów i dzięki temu poznawać każdy niuans intrygującej opowieści. \n" +
+            "\n" +
+            "Wraz z Grand Theft Auto V na urządzenia nowej generacji zawita także Grand Theft Auto Online, dynamiczny świat Grand Theft Auto pełen wielu możliwości. Zwiedzajcie przepastne tereny gry bądź pnijcie się po szczeblach przestępczej kariery i bierzcie wraz z innymi udział w akcjach, kupujcie posiadłości, pojazdy i ulepszenia postaci. Rywalizować można w tradycyjnych trybach gry oraz stworzonych i udostępnionych przez społeczność Grand Theft Auto akcjach. \n" +
+            "\n" +
+            "W dniu premiery na PlayStation®4, Xbox One oraz PC w Grand Theft Auto Online dostępna będzie cała opublikowana do tej pory zawartość oraz wszystkie możliwości rozgrywki, w tym nowe uzbrojenie, dziesiątki pojazdów, posiadłości i opcje zmiany wyglądu swojej postaci. Dodatkowo gracze będą mogli przenieść swoje obecne postacie z Grand Theft Auto Online na wybraną platformę PlayStation®4, Xbox One lub PC."
+
+    }
 ];
 
 export default gamesData;

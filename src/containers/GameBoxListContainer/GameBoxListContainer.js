@@ -1,8 +1,8 @@
 import React from "react";
-import { connect } from "react-redux";
+import {connect} from "react-redux";
 import GameBoxList from "../../presentational/GameBoxList/GameBoxList";
-import { deleteFoundGames } from "../../actions/games-actions";
-import { setPagesCount, setCurrentPage} from "../../actions/values-actions";
+import {deleteFoundGames} from "../../actions/games-actions";
+import {setPagesCount, setCurrentPage} from "../../actions/values-actions";
 
 
 class GameBoxListContainer extends React.Component {

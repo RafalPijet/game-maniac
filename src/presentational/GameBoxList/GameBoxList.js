@@ -16,7 +16,7 @@ class GameBoxList extends React.Component {
     }
 
     componentWillReceiveProps(nextProps) {
-
+        
         if (nextProps.searchState && !this.state.isSearchMode) {
             this.props.setCurrentPage(0);
             this.setState({isSearchMode: true});

@@ -1,7 +1,7 @@
 import React from "react";
 import {connect} from "react-redux";
 import "./SearchComponent.css";
-import { setSearchState } from "../../actions/values-actions";
+import {setSearchState} from "../../actions/values-actions";
 
 class SearchComponent extends React.Component {
     constructor(props) {
@@ -11,6 +11,7 @@ class SearchComponent extends React.Component {
             inputStyle: "search-input"
         }
     }
+
     componentWillReceiveProps(nextProps) {
         if (!nextProps.searchState) {
             this.setState({searchText: ""})

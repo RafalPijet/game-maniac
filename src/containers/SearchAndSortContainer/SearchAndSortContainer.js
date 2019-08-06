@@ -1,7 +1,7 @@
 import React from "react";
-import { connect } from "react-redux";
-import { searchGames, addGames, deleteFoundGames, searchPlatform, deletePlatform } from "../../actions/games-actions";
-import { setSearchState } from "../../actions/values-actions";
+import {connect} from "react-redux";
+import {searchGames, addGames, deleteFoundGames, searchPlatform, deletePlatform} from "../../actions/games-actions";
+import {setSearchState} from "../../actions/values-actions";
 import SearchComponent from "../../presentational/SearchComponent/SearchComponent";
 import SortComponent from "../../presentational/SortComponent/SortComponent";
 
@@ -79,6 +79,7 @@ class SearchAndSortContainer extends React.Component {
     }
 
     checkboxElementsHandling(id, isChecked) {
+        this.props.setSearchState(true);
         const useCheckboxes = () => new Promise(resolve => resolve(
             isChecked ? this.props.searchPlatform(id) : this.props.deletePlatform(id)
         ));

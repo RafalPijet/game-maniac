@@ -1,8 +1,8 @@
 import React from "react";
 import BasketItem from "../BasketItem/BasketItem";
 import Total from "../Total/Total";
-import { Link } from "react-router-dom";
-import { Button } from "reactstrap";
+import {Link} from "react-router-dom";
+import {Button} from "reactstrap";
 import "./Basket.css";
 
 const Basket = props => (

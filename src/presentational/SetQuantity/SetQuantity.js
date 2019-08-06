@@ -36,14 +36,20 @@ class SetQuantity extends React.Component {
                 <div className="basket-button-cell"
                      onClick={() => this.quantityHandling(this.props.basketGame.game.id, false)}>
                     <button className="basket-item-button" disabled={this.state.downButton}
-                            onClick={() => this.quantityHandling(this.props.basketGame.game.id, false)}>-
+                            onClick={event => {
+                                this.quantityHandling(this.props.basketGame.game.id, false);
+                                event.stopPropagation();
+                            }}>-
                     </button>
                 </div>
                 <h4>{this.props.basketGame.quantity}</h4>
                 <div className="basket-button-cell"
                      onClick={() => this.quantityHandling(this.props.basketGame.game.id, true)}>
                     <button className="basket-item-button" disabled={this.state.upButton}
-                            onClick={() => this.quantityHandling(this.props.basketGame.game.id, true)}>+
+                            onClick={event => {
+                                this.quantityHandling(this.props.basketGame.game.id, true);
+                                event.stopPropagation();
+                            }}>+
                     </button>
                 </div>
                 <h4>szt</h4>

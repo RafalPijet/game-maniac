@@ -1,5 +1,5 @@
 import React from "react";
-import { Collapse, Card, CardBody } from "reactstrap";
+import {Collapse, Card, CardBody} from "reactstrap";
 
 class FaqComponent extends React.Component {
     constructor(props) {
@@ -10,7 +10,7 @@ class FaqComponent extends React.Component {
         this.togglerNavbar = this.togglerNavbar.bind(this)
     }
 
-    togglerNavbar () {
+    togglerNavbar() {
         this.setState({collapsed: !this.state.collapsed})
     }
 

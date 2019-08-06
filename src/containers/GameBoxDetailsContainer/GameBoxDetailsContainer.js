@@ -1,14 +1,13 @@
 import React from "react";
-import { connect } from "react-redux";
+import {connect} from "react-redux";
 import GameBoxDetails from "../../presentational/GameBoxDetails/GameBoxDetails";
-import { getGame, addGames } from "../../actions/games-actions";
+import {getGame, addGames} from "../../actions/games-actions";
 import gamesData from "../../data/games";
 
 class GameBoxDetailsContainer extends React.Component {
 
     componentDidMount() {
         this.props.addGames(gamesData);
-        console.log(this.props);
         this.props.getGame(this.props.match.params.id);
     }
 

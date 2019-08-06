@@ -1,6 +1,6 @@
 import React from "react";
-import { connect } from "react-redux";
-import { addGame } from "../../actions/basket-actions";
+import {connect} from "react-redux";
+import {addGame} from "../../actions/basket-actions";
 import "./AddToBasket.css";
 
 class AddToBasket extends React.Component {
@@ -57,7 +57,8 @@ class AddToBasket extends React.Component {
     render() {
         return (
             <div className="add-button-main">
-                <button className={this.state.style + (this.state.scale ? "scaleDown" : "")} disabled={this.state.disabled}
+                <button className={this.state.style + (this.state.scale ? "scaleDown" : "")}
+                        disabled={this.state.disabled}
                         onClick={() => this.addGameToBasket(this.props.game)}>{this.state.description}</button>
             </div>
         )

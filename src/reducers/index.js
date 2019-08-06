@@ -1,4 +1,4 @@
-import { combineReducers } from "redux";
+import {combineReducers} from "redux";
 import gamesReducer from "./games-reducer";
 import basketReducer from "./basket-reducer";
 import valuesReducer from "./values-reducer";
