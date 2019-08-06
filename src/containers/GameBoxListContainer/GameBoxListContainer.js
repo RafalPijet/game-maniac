@@ -1,7 +1,7 @@
 import React from "react";
 import {connect} from "react-redux";
 import GameBoxList from "../../presentational/GameBoxList/GameBoxList";
-import {deleteFoundGames} from "../../actions/games-actions";
+import {deleteFoundGames, addGames} from "../../actions/games-actions";
 import {setPagesCount, setCurrentPage} from "../../actions/values-actions";
 
 
@@ -14,10 +14,11 @@ class GameBoxListContainer extends React.Component {
     }
 
     componentDidMount() {
+        this.props.addGames(this.props.initialGames);
         this.props.deleteFoundGames();
     }
 
-    componentWillReceiveProps(nextProps, nextContext) {
+    componentWillReceiveProps(nextProps) {
         this.setVisibleGames(nextProps.foundGames, nextProps.games)
     }
 
@@ -39,14 +40,16 @@ const MapStateToProps = store => {
         foundGames: store.gamesReducer.foundGames,
         pagesCount: store.valuesReducer.pagesCount,
         currentPage: store.valuesReducer.currentPage,
-        searchState: store.valuesReducer.searchState
+        searchState: store.valuesReducer.searchState,
+        initialGames: store.gamesReducer.initialGames
     }
 };
 
 const MapDispatchToProps = dispatch => ({
     deleteFoundGames: () => dispatch(deleteFoundGames()),
     setPagesCount: value => dispatch(setPagesCount(value)),
-    setCurrentPage: value => dispatch(setCurrentPage(value))
+    setCurrentPage: value => dispatch(setCurrentPage(value)),
+    addGames: games => dispatch(addGames(games))
 });
 
 export default connect(MapStateToProps, MapDispatchToProps)(GameBoxListContainer);
