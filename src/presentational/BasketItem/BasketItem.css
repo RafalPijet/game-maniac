@@ -1,5 +1,6 @@
 .basket-container {
-    padding: 15px 0;
+    position: relative;
+    padding: 5px 0;
     border-bottom: solid 1px #718093;
 }
 
@@ -31,17 +32,13 @@
     height: 160px;
 }
 
-.basket-delete-row {
-    width: 80vw;
-    display: flex;
-    justify-content: flex-end;
-}
-
 .basket-delete-button {
+    position: absolute;
+    bottom: 20px;
+    right: 104px;
     font-weight: bold;
     border-radius: 10px;
     cursor: pointer;
-    margin: -30px 6vw 0 0;
     outline: none;
     color: #fff;
     background-color: #c23616;

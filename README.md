@@ -1,4 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Hosting URL
+
+### https://game-maniac-77ace.firebaseapp.com/
 
 ## Available Scripts
 

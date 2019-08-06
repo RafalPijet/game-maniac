@@ -17,10 +17,8 @@ const BasketItem = props => (
             <ShowPriceComponent price={props.basketGame.game.price} oldPrice={props.basketGame.game.oldPrice}/>
             <SetQuantity basketGame={props.basketGame} upQuantity={props.upQuantity} downQuantity={props.downQuantity}/>
         </div>
-        <div className="basket-delete-row">
             <button className="basket-delete-button"
                     onClick={() => props.deleteGame(props.basketGame.game.id)}>usuń produkt</button>
-        </div>
     </div>
 
 );
